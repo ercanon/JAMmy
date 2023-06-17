@@ -9,7 +9,7 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody2D playerRB;
     private PlayerInput input;
 
-    public float movementSpeed;
+    [SerializeField] private float movementSpeed;
     private Vector2 inputMovement;
 
 

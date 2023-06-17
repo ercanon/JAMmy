@@ -6,14 +6,22 @@ using UnityEngine.InputSystem;
 public class GameManager : MonoBehaviour
 {
     /* ----- VARIABLES ----- */
-    public List<GameObject> dim;
+    [SerializeField] private List<GameObject> dim;
+
+    [SerializeField] private TMPro.TextMeshProUGUI render;
+    [SerializeField] private float timer;
+
+    private int playerCount;
 
 
 
     /* ----- GAME FRAMING ----- */
     void Start()
     {
-        
+        playerCount = 0;
+
+        timer *= 60;
+        StartCoroutine(StartTimer());
     }
 
     void Update()
@@ -21,35 +29,42 @@ public class GameManager : MonoBehaviour
         
     }
 
-
-
-    /* ----- WORLD BUIDING ----- */
-    public void SetNumPlayers(int size)
+    private IEnumerator StartTimer()
     {
-        switch (size)
+        while (true)
         {
-            case 3:
-                dim[3].SetActive(true);
-                goto case 2;
-            case 2:
-                dim[2].SetActive(true);
-                goto case 1;
-            case 1:
-                dim[1].SetActive(true);
-                goto case 0;
-            case 0:
-                dim[0].SetActive(true);
-                break;
+            timer -= Time.deltaTime;
+            int min = (int)(timer / 60f);
+            int sec = (int)(timer - min * 60);
+
+            render.text = string.Format("{0:0}:{1:00}", min, sec);
+
+            if (timer <= 0)
+                StopCoroutine(StartTimer());
+
+            yield return null;
         }
     }
 
+
+    /* ----- WORLD BUIDING ----- */
     public void onNewPlayer()
     {
-        
+        //GameObject.FindGameObjectsWithTag("ClonetoDelete");
+
+        if (!dim[playerCount].activeInHierarchy)
+        {
+            dim[playerCount].SetActive(true);
+            playerCount++;
+        }
     }
 
     public void onLeftPlayer()
     {
-
+        if (dim[playerCount].activeInHierarchy)
+        {
+            playerCount--;
+            dim[playerCount].SetActive(true);
+        }
     }
 }
