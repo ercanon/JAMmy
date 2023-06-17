@@ -1,23 +1,29 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class GameManager : MonoBehaviour
 {
+    /* ----- VARIABLES ----- */
     public List<GameObject> dim;
 
-    // Start is called before the first frame update
+
+
+    /* ----- GAME FRAMING ----- */
     void Start()
     {
         
     }
 
-    // Update is called once per frame
     void Update()
     {
         
     }
 
+
+
+    /* ----- WORLD BUIDING ----- */
     public void SetNumPlayers(int size)
     {
         switch (size)
@@ -35,5 +41,15 @@ public class GameManager : MonoBehaviour
                 dim[0].SetActive(true);
                 break;
         }
+    }
+
+    public void onNewPlayer()
+    {
+        
+    }
+
+    public void onLeftPlayer()
+    {
+
     }
 }
