@@ -5,6 +5,9 @@ using UnityEngine.InputSystem;
 
 public class PlayerMovement : MonoBehaviour
 {
+    enum CharacterState { Pause, Idle, Walking };
+    enum CharacterDirection { Right, Left };
+
     /* ----- VARIABLES ----- */
     private Rigidbody2D playerRB;
     private PlayerInput input;
@@ -12,6 +15,8 @@ public class PlayerMovement : MonoBehaviour
 
     [SerializeField] private float movementSpeed;
     private Vector2 inputMovement;
+    private CharacterState cState;
+    private CharacterDirection cDir;
 
 
 
@@ -20,7 +25,9 @@ public class PlayerMovement : MonoBehaviour
     {
         playerRB = GetComponent<Rigidbody2D>();
         input = GetComponent<PlayerInput>();
-        anim = GetComponentInChildren<Animator>();
+        anim = transform.GetChild(0).GetComponent<Animator>();
+
+        cState = CharacterState.Pause;
     }
 
     private void OnEnable()
@@ -31,15 +38,40 @@ public class PlayerMovement : MonoBehaviour
     void FixedUpdate()
     {
         playerRB.position += inputMovement * Time.deltaTime * movementSpeed;
+
+        if (cState == CharacterState.Walking && inputMovement == new Vector2(0, 0))
+        {
+            cState = CharacterState.Idle;
+            anim.SetBool("Walking", false);
+        }
+    }
+
+    public void SetCharacterState(int state)
+    {
+        cState = (CharacterState)state;
     }
 
     /* ----- GAME CONTROLLER ----- */
     public void OnMovement(InputAction.CallbackContext value)
     {
-        inputMovement = value.ReadValue<Vector2>();
-        if (inputMovement.x > 0)
-            anim.SetBool("Direction", true);
-        else anim.SetBool("Direction", false);
+        if (cState != CharacterState.Pause)
+        {
+            cState = CharacterState.Walking;
+            anim.SetBool("Walking", true);
+
+            inputMovement = value.ReadValue<Vector2>();
+
+            if (inputMovement.x < 0 && cDir != CharacterDirection.Left)
+            {
+                cDir = CharacterDirection.Left;
+                transform.localScale = new Vector3(-1, 1, 1);
+            }
+            else if (inputMovement.x > 0 && cDir != CharacterDirection.Right)
+            {
+                cDir = CharacterDirection.Right;
+                transform.localScale = new Vector3(1, 1, 1);
+            }
+        }
     }
 
     public void OnHability1(InputAction.CallbackContext value)

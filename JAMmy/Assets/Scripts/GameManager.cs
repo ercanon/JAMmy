@@ -8,7 +8,7 @@ using UnityEngine.InputSystem.UI;
 
 public class GameManager : MonoBehaviour
 {
-    enum GameState { MenuScreen, GamePlayScreen, EndScreen };
+    enum GameState { MenuScreen, GamePlayScreen, EndScreen, Transition };
 
     /* ----- VARIABLES ----- */
     [SerializeField] private TMPro.TextMeshProUGUI render;
@@ -71,11 +71,6 @@ public class GameManager : MonoBehaviour
         {
             characters[playerCount].SetActive(true);
             playerCount++;
-
-            print(characters[0].activeInHierarchy);
-            print(characters[1].activeInHierarchy);
-            print(characters[2].activeInHierarchy);
-            print(characters[3].activeInHierarchy);
         }
     }
 
@@ -96,8 +91,11 @@ public class GameManager : MonoBehaviour
             Destroy(clone);
 
         foreach (GameObject player in characters)
-            if (player.activeInHierarchy) 
+            if (player.activeInHierarchy)
+            {
                 player.GetComponent<PlayerInput>().enabled = true;
+                player.transform.parent.GetComponent<PlayerMovement>().SetCharacterState(1);
+            }
     }
 
     public void onSettings()
