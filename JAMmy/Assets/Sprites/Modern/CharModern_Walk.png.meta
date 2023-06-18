@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 364c309082bbc794bac6f91c9785f065
+guid: aced16fabf1fee24997b3e05ef954666
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -67,10 +67,10 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 128
+    maxTextureSize: 256
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -105,7 +105,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: CharEthereal_Idle_Glow_0
+      name: CharModern_Walk_0
       rect:
         serializedVersion: 2
         x: 0
@@ -119,14 +119,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 68f0875f37f1cbb498f8274b2095a128
-      internalID: -1878428334
+      spriteID: 8cc00eab973be1843bfef821c05105cc
+      internalID: 2089295194
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CharEthereal_Idle_Glow_1
+      name: CharModern_Walk_1
       rect:
         serializedVersion: 2
         x: 32
@@ -140,14 +140,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f78c49e0e20fd414599c28a53894828f
-      internalID: -353756481
+      spriteID: 931160c599f137941b406afd8a97c68b
+      internalID: -1235843983
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CharEthereal_Idle_Glow_2
+      name: CharModern_Walk_2
       rect:
         serializedVersion: 2
         x: 64
@@ -161,14 +161,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 650f09c459b9bdd4f99fdfed81c5b669
-      internalID: -1887826680
+      spriteID: 1e71402a87218e542bf835df24952bf8
+      internalID: 450584197
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CharEthereal_Idle_Glow_3
+      name: CharModern_Walk_3
       rect:
         serializedVersion: 2
         x: 96
@@ -182,8 +182,92 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 896c36fb75f7e2f428623570c3dba762
-      internalID: 1117182993
+      spriteID: ef8e8aa9f1fa61144bd3e26e2ab4fde2
+      internalID: 1100216959
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CharModern_Walk_4
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b810c18ae28d2ae4daf3982245f626c6
+      internalID: 1601641812
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CharModern_Walk_5
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c9daf2ba0884f54d8878e4002f0f422
+      internalID: 1748115919
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CharModern_Walk_6
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c987fbe17c324524090166bbfdaf6e69
+      internalID: -790380692
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CharModern_Walk_7
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1f0e27f9568004479c94a62322bf01b
+      internalID: -802259635
       vertices: []
       indices: 
       edges: []
@@ -199,10 +283,14 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      CharEthereal_Idle_Glow_0: -1878428334
-      CharEthereal_Idle_Glow_1: -353756481
-      CharEthereal_Idle_Glow_2: -1887826680
-      CharEthereal_Idle_Glow_3: 1117182993
+      CharModern_Walk_0: 2089295194
+      CharModern_Walk_1: -1235843983
+      CharModern_Walk_2: 450584197
+      CharModern_Walk_3: 1100216959
+      CharModern_Walk_4: 1601641812
+      CharModern_Walk_5: 1748115919
+      CharModern_Walk_6: -790380692
+      CharModern_Walk_7: -802259635
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

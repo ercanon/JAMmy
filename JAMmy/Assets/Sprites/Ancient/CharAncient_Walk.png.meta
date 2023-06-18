@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 364c309082bbc794bac6f91c9785f065
+guid: 8ff4f8330dd2360449f442b11b8ca49d
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -36,9 +36,9 @@ TextureImporter:
     filterMode: 0
     aniso: 1
     mipBias: 0
-    wrapU: 1
-    wrapV: 1
-    wrapW: 1
+    wrapU: 0
+    wrapV: 0
+    wrapW: 0
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
@@ -67,10 +67,10 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 128
+    maxTextureSize: 256
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -105,7 +105,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: CharEthereal_Idle_Glow_0
+      name: CharAncient_Walk_0
       rect:
         serializedVersion: 2
         x: 0
@@ -119,14 +119,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 68f0875f37f1cbb498f8274b2095a128
-      internalID: -1878428334
+      spriteID: 2ed00c1c76efcee4a81af203380c9146
+      internalID: -1058495788
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CharEthereal_Idle_Glow_1
+      name: CharAncient_Walk_1
       rect:
         serializedVersion: 2
         x: 32
@@ -140,14 +140,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f78c49e0e20fd414599c28a53894828f
-      internalID: -353756481
+      spriteID: f9b336acc3d58434793ec2913e8ac2d3
+      internalID: 1660515975
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CharEthereal_Idle_Glow_2
+      name: CharAncient_Walk_2
       rect:
         serializedVersion: 2
         x: 64
@@ -161,14 +161,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 650f09c459b9bdd4f99fdfed81c5b669
-      internalID: -1887826680
+      spriteID: 7c3d2a6917eac6b4a8308afb3c9140eb
+      internalID: 1926000779
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CharEthereal_Idle_Glow_3
+      name: CharAncient_Walk_3
       rect:
         serializedVersion: 2
         x: 96
@@ -182,8 +182,92 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 896c36fb75f7e2f428623570c3dba762
-      internalID: 1117182993
+      spriteID: f91127bd303ce1b4487987e189c56a2c
+      internalID: 914357340
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CharAncient_Walk_4
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f33f484c4b4a74c48bf9d5840d2fe43b
+      internalID: -1105748905
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CharAncient_Walk_5
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cfde59dc7cfdd934daa02ec048655ca3
+      internalID: 2098232510
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CharAncient_Walk_6
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e33aaf7df24a494ea8abcfed894fcfc
+      internalID: 1937167996
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CharAncient_Walk_7
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e7687d294d2c214cb59c34326283339
+      internalID: -2118870497
       vertices: []
       indices: 
       edges: []
@@ -199,10 +283,14 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      CharEthereal_Idle_Glow_0: -1878428334
-      CharEthereal_Idle_Glow_1: -353756481
-      CharEthereal_Idle_Glow_2: -1887826680
-      CharEthereal_Idle_Glow_3: 1117182993
+      CharAncient_Walk_0: -1058495788
+      CharAncient_Walk_1: 1660515975
+      CharAncient_Walk_2: 1926000779
+      CharAncient_Walk_3: 914357340
+      CharAncient_Walk_4: -1105748905
+      CharAncient_Walk_5: 2098232510
+      CharAncient_Walk_6: 1937167996
+      CharAncient_Walk_7: -2118870497
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

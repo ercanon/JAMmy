@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 364c309082bbc794bac6f91c9785f065
+guid: c8f719e65f04eb741a9995a5dd801988
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -67,10 +67,10 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 128
+    maxTextureSize: 256
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -105,7 +105,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: CharEthereal_Idle_Glow_0
+      name: CharMedieval_Walk_0
       rect:
         serializedVersion: 2
         x: 0
@@ -119,14 +119,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 68f0875f37f1cbb498f8274b2095a128
-      internalID: -1878428334
+      spriteID: 56dbb7e494380fe48a37741921ff171e
+      internalID: -746975758
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CharEthereal_Idle_Glow_1
+      name: CharMedieval_Walk_1
       rect:
         serializedVersion: 2
         x: 32
@@ -140,14 +140,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f78c49e0e20fd414599c28a53894828f
-      internalID: -353756481
+      spriteID: a41be1491099f554fb9b16469f799012
+      internalID: -1736718335
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CharEthereal_Idle_Glow_2
+      name: CharMedieval_Walk_2
       rect:
         serializedVersion: 2
         x: 64
@@ -161,14 +161,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 650f09c459b9bdd4f99fdfed81c5b669
-      internalID: -1887826680
+      spriteID: 277a4792a039b504c9ac6b73305a48f1
+      internalID: 2095184047
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CharEthereal_Idle_Glow_3
+      name: CharMedieval_Walk_3
       rect:
         serializedVersion: 2
         x: 96
@@ -182,8 +182,92 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 896c36fb75f7e2f428623570c3dba762
-      internalID: 1117182993
+      spriteID: 8869dd6c1d6cfb74b80c376584989deb
+      internalID: -2051062178
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CharMedieval_Walk_4
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a5c2d03c0e6ae74fba80bd6e98cab33
+      internalID: 1686152377
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CharMedieval_Walk_5
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d72489bf66abd64591f8c5139235dde
+      internalID: -55066571
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CharMedieval_Walk_6
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99492e3242136504d8d969d7ffd0bce9
+      internalID: -1853118561
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CharMedieval_Walk_7
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67854e2f1c46aa34596f1d9ca7a1698f
+      internalID: -1988390508
       vertices: []
       indices: 
       edges: []
@@ -199,10 +283,14 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      CharEthereal_Idle_Glow_0: -1878428334
-      CharEthereal_Idle_Glow_1: -353756481
-      CharEthereal_Idle_Glow_2: -1887826680
-      CharEthereal_Idle_Glow_3: 1117182993
+      CharMedieval_Walk_0: -746975758
+      CharMedieval_Walk_1: -1736718335
+      CharMedieval_Walk_2: 2095184047
+      CharMedieval_Walk_3: -2051062178
+      CharMedieval_Walk_4: 1686152377
+      CharMedieval_Walk_5: -55066571
+      CharMedieval_Walk_6: -1853118561
+      CharMedieval_Walk_7: -1988390508
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
