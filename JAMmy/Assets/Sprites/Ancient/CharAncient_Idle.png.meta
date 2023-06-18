@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 8ff4f8330dd2360449f442b11b8ca49d
+guid: 7625ed0c180d5174ab1892e25f4e737b
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -105,7 +105,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: CharAncient_Walk_0
+      name: CharAncient_Idle_0
       rect:
         serializedVersion: 2
         x: 0
@@ -119,14 +119,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2ed00c1c76efcee4a81af203380c9146
-      internalID: -1058495788
+      spriteID: 0ea91279373168b4bb0d32ba31d904df
+      internalID: -1198412209
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CharAncient_Walk_1
+      name: CharAncient_Idle_1
       rect:
         serializedVersion: 2
         x: 32
@@ -140,14 +140,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f9b336acc3d58434793ec2913e8ac2d3
-      internalID: 1660515975
+      spriteID: 8ab1e21101ed3114c9b3ddf2ed621edf
+      internalID: 123096074
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CharAncient_Walk_2
+      name: CharAncient_Idle_2
       rect:
         serializedVersion: 2
         x: 64
@@ -161,14 +161,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7c3d2a6917eac6b4a8308afb3c9140eb
-      internalID: 1926000779
+      spriteID: c6294cdf9805b1541b308295d169723f
+      internalID: 1265706077
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CharAncient_Walk_3
+      name: CharAncient_Idle_3
       rect:
         serializedVersion: 2
         x: 96
@@ -182,14 +182,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f91127bd303ce1b4487987e189c56a2c
-      internalID: 914357340
+      spriteID: f7861195996b9394391e3cf5e50523b7
+      internalID: 592367843
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CharAncient_Walk_4
+      name: CharAncient_Idle_4
       rect:
         serializedVersion: 2
         x: 128
@@ -203,14 +203,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f33f484c4b4a74c48bf9d5840d2fe43b
-      internalID: -1105748905
+      spriteID: 88e7d2cf6b102f648820b7364269f84d
+      internalID: 2036681426
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CharAncient_Walk_5
+      name: CharAncient_Idle_5
       rect:
         serializedVersion: 2
         x: 160
@@ -224,14 +224,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cfde59dc7cfdd934daa02ec048655ca3
-      internalID: 2098232510
+      spriteID: 92360e671bd67ff40974d04db2afd728
+      internalID: -163550113
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CharAncient_Walk_6
+      name: CharAncient_Idle_6
       rect:
         serializedVersion: 2
         x: 192
@@ -245,29 +245,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2e33aaf7df24a494ea8abcfed894fcfc
-      internalID: 1937167996
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: CharAncient_Walk_7
-      rect:
-        serializedVersion: 2
-        x: 224
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8e7687d294d2c214cb59c34326283339
-      internalID: -2118870497
+      spriteID: 510f5f1e390bc1b48b42adb2fc9522e9
+      internalID: 27480053
       vertices: []
       indices: 
       edges: []
@@ -283,14 +262,13 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      CharAncient_Walk_0: -1058495788
-      CharAncient_Walk_1: 1660515975
-      CharAncient_Walk_2: 1926000779
-      CharAncient_Walk_3: 914357340
-      CharAncient_Walk_4: -1105748905
-      CharAncient_Walk_5: 2098232510
-      CharAncient_Walk_6: 1937167996
-      CharAncient_Walk_7: -2118870497
+      CharAncient_Idle_0: -1198412209
+      CharAncient_Idle_1: 123096074
+      CharAncient_Idle_2: 1265706077
+      CharAncient_Idle_3: 592367843
+      CharAncient_Idle_4: 2036681426
+      CharAncient_Idle_5: -163550113
+      CharAncient_Idle_6: 27480053
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
