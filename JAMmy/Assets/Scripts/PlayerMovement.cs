@@ -105,6 +105,9 @@ public class PlayerMovement : MonoBehaviour
         if (value.started)
         {
             transform.GetChild(0).gameObject.SetActive(false);
+
+            foreach (GameObject clone in GameObject.FindGameObjectsWithTag("ClonetoDelete"))
+                Destroy(clone);
         }
     }
 
