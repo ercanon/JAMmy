@@ -25,6 +25,7 @@ public class GameManager : MonoBehaviour
         Cursor.lockState = CursorLockMode.Locked;
         playerCount = 0;
 
+        initPos = new List<Vector2>();
         foreach (GameObject go in characters)
             initPos.Add(go.transform.position);
 
@@ -61,6 +62,10 @@ public class GameManager : MonoBehaviour
     {
         characters[playerCount].SetActive(true);
         playerCount++;
+
+        foreach (GameObject player in characters)
+            if (player.activeInHierarchy)
+                player.GetComponent<PlayerInput>().enabled = true;
     }
 
     public void onLeftPlayer()

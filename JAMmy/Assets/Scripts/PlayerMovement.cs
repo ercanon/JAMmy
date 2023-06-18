@@ -37,6 +37,9 @@ public class PlayerMovement : MonoBehaviour
     public void OnMovement(InputAction.CallbackContext value)
     {
         inputMovement = value.ReadValue<Vector2>();
+        if (inputMovement.x > 0)
+            anim.SetBool("Direction", true);
+        else anim.SetBool("Direction", false);
     }
 
     public void OnHability1(InputAction.CallbackContext value)
