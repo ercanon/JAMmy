@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.InputSystem.UI;
+using TMPro;
 
 
 
@@ -11,16 +12,15 @@ public class GameManager : MonoBehaviour
     enum GameState { MenuScreen, GamePlayScreen, EndScreen, Transition };
 
     /* ----- VARIABLES ----- */
-    [SerializeField] private TMPro.TextMeshProUGUI render;
+    [SerializeField] private TextMeshProUGUI render;
     [SerializeField] private MultiplayerEventSystem events;
     [SerializeField] private List<GameObject> characters;
+    private int playerCount;
     private List<Vector2> initPos;
 
     private GameState gState;
     [SerializeField] private float timer;
     private IEnumerator timerCoroutine;
-
-    private int playerCount;
 
 
 
@@ -65,30 +65,34 @@ public class GameManager : MonoBehaviour
 
 
     /* ----- GAME MANAGEMENT ----- */
-    public void onNewPlayer()
+    public void onNewPlayer(PlayerInput input)
     {
+        try { Destroy(GameObject.FindWithTag("ClonetoDelete")); }
+        catch { }
+
         if (gState == GameState.MenuScreen)
         {
             characters[playerCount].SetActive(true);
-            playerCount++;
+
+            if (input.actions != null) playerCount++;
         }
     }
 
-    public void onLeftPlayer()
+    public void onLeftPlayer(PlayerInput input)
     {
-        if (gState == GameState.MenuScreen)
+        if (gState == GameState.MenuScreen && input.actions != null)
         {
             playerCount--;
             characters[playerCount].SetActive(false);
         }
     }
 
+
+
+    /* ----- MENU BUTTONS ----- */
     public void onPlay()
     {
         gState = GameState.GamePlayScreen;
-
-        foreach (GameObject clone in GameObject.FindGameObjectsWithTag("ClonetoDelete"))
-            Destroy(clone);
 
         foreach (GameObject player in characters)
             if (player.activeInHierarchy)
