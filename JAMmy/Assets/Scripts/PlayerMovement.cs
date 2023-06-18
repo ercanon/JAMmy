@@ -67,7 +67,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if (value.started)
         {
-
+            transform.GetChild(0).gameObject.SetActive(false);
         }
     }
 

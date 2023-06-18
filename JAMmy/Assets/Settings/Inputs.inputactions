@@ -164,7 +164,7 @@
             "id": "afe9f5d6-2fd5-42b5-b702-3a7a1accddba",
             "actions": [
                 {
-                    "name": "Enter",
+                    "name": "Submit",
                     "type": "Button",
                     "id": "caa08bfb-b185-4853-8c05-f12e2b5cff74",
                     "expectedControlType": "Button",
@@ -199,7 +199,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Keyboard",
-                    "action": "Enter",
+                    "action": "Submit",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -210,14 +210,25 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Keyboard Arrow",
-                    "action": "Enter",
+                    "action": "Submit",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "51be676d-0c72-4c6c-a1ac-a8d5212a03ea",
+                    "path": "<Gamepad>/buttonSouth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "GamePad",
+                    "action": "Submit",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
                 {
                     "name": "",
                     "id": "efbccb8c-ed42-47fa-870d-5cd1788d4935",
-                    "path": "<Keyboard>/e",
+                    "path": "<Keyboard>/q",
                     "interactions": "",
                     "processors": "",
                     "groups": "Keyboard",
@@ -227,12 +238,23 @@
                 },
                 {
                     "name": "",
-                    "id": "90a80382-f531-48ce-a99e-46f7aabc570c",
-                    "path": "<Gamepad>/leftStick",
+                    "id": "cc8c8357-6908-40fd-be83-7022692add98",
+                    "path": "<Gamepad>/buttonEast",
                     "interactions": "",
                     "processors": "",
                     "groups": "GamePad",
-                    "action": "Move",
+                    "action": "Cancel",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "6576f1f0-fffa-4bd5-9c20-eb9cebd1a18f",
+                    "path": "<Keyboard>/backspace",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard Arrow",
+                    "action": "Cancel",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -350,6 +372,17 @@
                     "name": "",
                     "id": "44666b63-700a-4af5-83fc-f40ae5e9cf52",
                     "path": "<Gamepad>/dpad",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "GamePad",
+                    "action": "Move",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "56914405-3b76-46de-aef3-1c22be864646",
+                    "path": "<Gamepad>/leftStick",
                     "interactions": "",
                     "processors": "",
                     "groups": "GamePad",
