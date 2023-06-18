@@ -2,13 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.InputSystem.UI;
 
 public class GameManager : MonoBehaviour
 {
     /* ----- VARIABLES ----- */
-    [SerializeField] private List<GameObject> characters;
-
     [SerializeField] private TMPro.TextMeshProUGUI render;
+    [SerializeField] private MultiplayerEventSystem events;
+    [SerializeField] private List<GameObject> characters;
+    private List<Vector2> initPos;
+
     [SerializeField] private float timer;
     private IEnumerator timerCoroutine;
 
@@ -21,6 +24,9 @@ public class GameManager : MonoBehaviour
     {
         Cursor.lockState = CursorLockMode.Locked;
         playerCount = 0;
+
+        foreach (GameObject go in characters)
+            initPos.Add(go.transform.position);
 
         timer *= 60;
         timerCoroutine = StartTimer();
@@ -59,14 +65,17 @@ public class GameManager : MonoBehaviour
 
     public void onLeftPlayer()
     {
-        playerCount--;
-        characters[playerCount].SetActive(false);
+
     }
 
     public void onPlay()
     {
-        //foreach (GameObject clone in GameObject.FindGameObjectsWithTag("ClonetoDelete"))
-        //    Destroy(clone);
+        foreach (GameObject clone in GameObject.FindGameObjectsWithTag("ClonetoDelete"))
+            Destroy(clone);
+
+        foreach (GameObject player in characters)
+            if (player.activeInHierarchy) 
+                player.GetComponent<PlayerInput>().enabled = true;
     }
 
     public void onSettings()

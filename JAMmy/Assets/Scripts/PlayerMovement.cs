@@ -8,6 +8,7 @@ public class PlayerMovement : MonoBehaviour
     /* ----- VARIABLES ----- */
     private Rigidbody2D playerRB;
     private PlayerInput input;
+    private Animator anim;
 
     [SerializeField] private float movementSpeed;
     private Vector2 inputMovement;
@@ -17,8 +18,9 @@ public class PlayerMovement : MonoBehaviour
     /* ----- GAME FRAMING ----- */
     void Start()
     {
-        playerRB = gameObject.GetComponent<Rigidbody2D>();
-        input = gameObject.GetComponent<PlayerInput>();
+        playerRB = GetComponent<Rigidbody2D>();
+        input = GetComponent<PlayerInput>();
+        anim = GetComponentInChildren<Animator>();
     }
 
     private void OnEnable()
