@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 7625ed0c180d5174ab1892e25f4e737b
+guid: c8f719e65f04eb741a9995a5dd801988
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -105,7 +105,175 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: CharAncient_Idle_0
+      name: Medieval_Body_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2bc485d9655e20438c6462e51f809b3
+      internalID: -2134535835
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Medieval_Body_1
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1c4a2151f7804245a23851af4984e82
+      internalID: -2098497767
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Medieval_Body_2
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9071d60ab21e0394eab164098db30af3
+      internalID: -1370829296
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Medieval_Body_3
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98bbe6998caa93942a777ddda3ee4a68
+      internalID: 1493750981
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Medieval_Body_4
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 487ebf3b5aab21146b31b830883b3b43
+      internalID: -54607897
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Medieval_Body_5
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c694c6b701336f54b9ee3dd5c6da97cb
+      internalID: 276109143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Medieval_Body_6
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c8e97abe3851e24fa3e3c20da9cd370
+      internalID: -689659696
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Medieval_Body_7
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d28da31ffd6668847a14147e3c30c433
+      internalID: -275112666
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Medieval_Body_8
       rect:
         serializedVersion: 2
         x: 0
@@ -119,14 +287,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0ea91279373168b4bb0d32ba31d904df
-      internalID: -1198412209
+      spriteID: b15998841ff2d734587804951e17ff5c
+      internalID: -784143402
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CharAncient_Idle_1
+      name: Medieval_Body_9
       rect:
         serializedVersion: 2
         x: 32
@@ -140,14 +308,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8ab1e21101ed3114c9b3ddf2ed621edf
-      internalID: 123096074
+      spriteID: 3688bdccb626a8146ae3c21643f98105
+      internalID: -841166170
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CharAncient_Idle_2
+      name: Medieval_Body_10
       rect:
         serializedVersion: 2
         x: 64
@@ -161,14 +329,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c6294cdf9805b1541b308295d169723f
-      internalID: 1265706077
+      spriteID: 8cd16ef2d972d3b47bfd80a447b498a8
+      internalID: 190060346
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CharAncient_Idle_3
+      name: Medieval_Body_11
       rect:
         serializedVersion: 2
         x: 96
@@ -182,14 +350,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f7861195996b9394391e3cf5e50523b7
-      internalID: 592367843
+      spriteID: 902e3ad198251114aaea5cfca7953a45
+      internalID: -689385772
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CharAncient_Idle_4
+      name: Medieval_Body_12
       rect:
         serializedVersion: 2
         x: 128
@@ -203,14 +371,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 88e7d2cf6b102f648820b7364269f84d
-      internalID: 2036681426
+      spriteID: 96180001aeaa0d145bb15a7e10051046
+      internalID: -528990641
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CharAncient_Idle_5
+      name: Medieval_Body_13
       rect:
         serializedVersion: 2
         x: 160
@@ -224,14 +392,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 92360e671bd67ff40974d04db2afd728
-      internalID: -163550113
+      spriteID: 6a871707382f3614cae08ce46f1a87d9
+      internalID: -250713961
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CharAncient_Idle_6
+      name: Medieval_Body_14
       rect:
         serializedVersion: 2
         x: 192
@@ -245,8 +413,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 510f5f1e390bc1b48b42adb2fc9522e9
-      internalID: 27480053
+      spriteID: 3f9c59c7a055f28418b736534908612c
+      internalID: 1338337100
       vertices: []
       indices: 
       edges: []
@@ -260,15 +428,25 @@ TextureImporter:
     indices: 
     edges: []
     weights: []
-    secondaryTextures: []
+    secondaryTextures:
+    - texture: {fileID: 2800000, guid: eca48045100b76248bab224627a6f284, type: 3}
+      name: Glow
     nameFileIdTable:
-      CharAncient_Idle_0: -1198412209
-      CharAncient_Idle_1: 123096074
-      CharAncient_Idle_2: 1265706077
-      CharAncient_Idle_3: 592367843
-      CharAncient_Idle_4: 2036681426
-      CharAncient_Idle_5: -163550113
-      CharAncient_Idle_6: 27480053
+      Medieval_Body_0: -2134535835
+      Medieval_Body_1: -2098497767
+      Medieval_Body_10: 190060346
+      Medieval_Body_11: -689385772
+      Medieval_Body_12: -528990641
+      Medieval_Body_13: -250713961
+      Medieval_Body_14: 1338337100
+      Medieval_Body_2: -1370829296
+      Medieval_Body_3: 1493750981
+      Medieval_Body_4: -54607897
+      Medieval_Body_5: 276109143
+      Medieval_Body_6: -689659696
+      Medieval_Body_7: -275112666
+      Medieval_Body_8: -784143402
+      Medieval_Body_9: -841166170
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

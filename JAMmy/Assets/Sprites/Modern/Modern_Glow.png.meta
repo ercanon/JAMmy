@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 8ff4f8330dd2360449f442b11b8ca49d
+guid: c8dd0a663f7ef6d409cbbcc77e591101
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -105,7 +105,175 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: CharAncient_Walk_0
+      name: Modern_Glow_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb9cab1d7636bcc4d9716ec20aab67b4
+      internalID: 1808366058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Modern_Glow_1
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae4ef55eec1a7544f9f5e1b24aa2b208
+      internalID: -377155997
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Modern_Glow_2
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2fec3a7d10a65a2479065a2f404786cf
+      internalID: -275855876
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Modern_Glow_3
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8391db991ef4b144b569c60d007dab3
+      internalID: -990249604
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Modern_Glow_4
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bdb0e0bfdc89cfa4bbfbe7d4cf84d32d
+      internalID: 1158045217
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Modern_Glow_5
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db6f55ae0bbecd8479f791dfc2710aa2
+      internalID: -1677004362
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Modern_Glow_6
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d872abcaa383b94daa3f05f54f29ce4
+      internalID: -1142665947
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Modern_Glow_7
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d56d3318e2183e4418d232de453094ff
+      internalID: 1304474486
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Modern_Glow_8
       rect:
         serializedVersion: 2
         x: 0
@@ -119,14 +287,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2ed00c1c76efcee4a81af203380c9146
-      internalID: -1058495788
+      spriteID: 116448f9dc8dce040966749af8678ffd
+      internalID: -2094331825
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CharAncient_Walk_1
+      name: Modern_Glow_9
       rect:
         serializedVersion: 2
         x: 32
@@ -140,14 +308,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f9b336acc3d58434793ec2913e8ac2d3
-      internalID: 1660515975
+      spriteID: 79e4cd7c400217e40b74def365c79f74
+      internalID: -757366815
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CharAncient_Walk_2
+      name: Modern_Glow_10
       rect:
         serializedVersion: 2
         x: 64
@@ -161,14 +329,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7c3d2a6917eac6b4a8308afb3c9140eb
-      internalID: 1926000779
+      spriteID: 506f3a81ca01b2f4caf278eeb12fc3cf
+      internalID: -1683102982
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CharAncient_Walk_3
+      name: Modern_Glow_11
       rect:
         serializedVersion: 2
         x: 96
@@ -182,14 +350,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f91127bd303ce1b4487987e189c56a2c
-      internalID: 914357340
+      spriteID: d4f65ca0b6b6d204397798c634a878bb
+      internalID: -949021386
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CharAncient_Walk_4
+      name: Modern_Glow_12
       rect:
         serializedVersion: 2
         x: 128
@@ -203,14 +371,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f33f484c4b4a74c48bf9d5840d2fe43b
-      internalID: -1105748905
+      spriteID: d00a85ef350651c46b0f3943e7b843d0
+      internalID: -1602944310
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CharAncient_Walk_5
+      name: Modern_Glow_13
       rect:
         serializedVersion: 2
         x: 160
@@ -224,14 +392,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cfde59dc7cfdd934daa02ec048655ca3
-      internalID: 2098232510
+      spriteID: 7b5631f1ff0de6243a5e5b9d8078f787
+      internalID: -389801773
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CharAncient_Walk_6
+      name: Modern_Glow_14
       rect:
         serializedVersion: 2
         x: 192
@@ -245,29 +413,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2e33aaf7df24a494ea8abcfed894fcfc
-      internalID: 1937167996
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: CharAncient_Walk_7
-      rect:
-        serializedVersion: 2
-        x: 224
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8e7687d294d2c214cb59c34326283339
-      internalID: -2118870497
+      spriteID: d2006658f6f9930448b84df742bddc7d
+      internalID: -1111295546
       vertices: []
       indices: 
       edges: []
@@ -283,14 +430,21 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      CharAncient_Walk_0: -1058495788
-      CharAncient_Walk_1: 1660515975
-      CharAncient_Walk_2: 1926000779
-      CharAncient_Walk_3: 914357340
-      CharAncient_Walk_4: -1105748905
-      CharAncient_Walk_5: 2098232510
-      CharAncient_Walk_6: 1937167996
-      CharAncient_Walk_7: -2118870497
+      Modern_Glow_0: 1808366058
+      Modern_Glow_1: -377155997
+      Modern_Glow_10: -1683102982
+      Modern_Glow_11: -949021386
+      Modern_Glow_12: -1602944310
+      Modern_Glow_13: -389801773
+      Modern_Glow_14: -1111295546
+      Modern_Glow_2: -275855876
+      Modern_Glow_3: -990249604
+      Modern_Glow_4: 1158045217
+      Modern_Glow_5: -1677004362
+      Modern_Glow_6: -1142665947
+      Modern_Glow_7: 1304474486
+      Modern_Glow_8: -2094331825
+      Modern_Glow_9: -757366815
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

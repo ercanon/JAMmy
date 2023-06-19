@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: c8dd0a663f7ef6d409cbbcc77e591101
+guid: eca48045100b76248bab224627a6f284
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -105,7 +105,175 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: CharModern_Walk_Glow_0
+      name: Medieval_Glow_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: efeb3035b0d00934c86dab3bd4ed688d
+      internalID: -651910004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Medieval_Glow_1
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d48f9467ddb6f294c911779cc0ff98be
+      internalID: -1401884588
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Medieval_Glow_2
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 500e22c5e5643664395f260df61d0f71
+      internalID: 195759983
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Medieval_Glow_3
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0cdc0ec390a41ef4896ec51b869c8b46
+      internalID: -1112493151
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Medieval_Glow_4
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1bba6930177c12744be6adafe39144b8
+      internalID: -324637386
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Medieval_Glow_5
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1cd22b35fec9dba48bedc89a7fe63e62
+      internalID: -519295891
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Medieval_Glow_6
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24e8e17938a2c384e9b17b960a8a87fa
+      internalID: -1203924353
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Medieval_Glow_7
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46fc86a564d1fa14d90542c55cf701e2
+      internalID: 182969870
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Medieval_Glow_8
       rect:
         serializedVersion: 2
         x: 0
@@ -113,20 +281,20 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3120ab2cc1eded840871f00d828b1cf0
-      internalID: -799372021
+      spriteID: 75789e7c7f503dc4c88a9088457737ff
+      internalID: -2143850188
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CharModern_Walk_Glow_1
+      name: Medieval_Glow_9
       rect:
         serializedVersion: 2
         x: 32
@@ -134,20 +302,20 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6eb722827ce833348b53430604404122
-      internalID: 752741193
+      spriteID: 5b89826632447d748883b6c6e7cb14fd
+      internalID: -1335846908
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CharModern_Walk_Glow_2
+      name: Medieval_Glow_10
       rect:
         serializedVersion: 2
         x: 64
@@ -155,20 +323,20 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a88a911860ee7584abd1f55d04f74722
-      internalID: 2084516982
+      spriteID: 97cb9f42fc5da894e93820d9dc793c44
+      internalID: 1011333121
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CharModern_Walk_Glow_3
+      name: Medieval_Glow_11
       rect:
         serializedVersion: 2
         x: 96
@@ -176,20 +344,20 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b003b89ef1b5d194ab5669a4c568d763
-      internalID: -847863490
+      spriteID: 8de701b7459922d47851d3df289eb156
+      internalID: -1694269187
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CharModern_Walk_Glow_4
+      name: Medieval_Glow_12
       rect:
         serializedVersion: 2
         x: 128
@@ -197,20 +365,20 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 040e9454ede433544a6397c3e7d2d3a3
-      internalID: -1785090492
+      spriteID: 6c980824798fbd44ab923076712cb247
+      internalID: 300715364
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CharModern_Walk_Glow_5
+      name: Medieval_Glow_13
       rect:
         serializedVersion: 2
         x: 160
@@ -218,20 +386,20 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1a767226f9bfee1458a9e952bfb2d68e
-      internalID: 655291064
+      spriteID: 387463423aab8ad4c841d268ccd03fc8
+      internalID: -3219692
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CharModern_Walk_Glow_6
+      name: Medieval_Glow_14
       rect:
         serializedVersion: 2
         x: 192
@@ -239,35 +407,14 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0e82e60a8295e5c40b14cac0576bfde0
-      internalID: -1897041075
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: CharModern_Walk_Glow_7
-      rect:
-        serializedVersion: 2
-        x: 224
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f93d38b7126d37a4ab27a3d833526fcd
-      internalID: 1185552579
+      spriteID: 6a80962b09cbbdd4f84c30c9bd7a47cb
+      internalID: -1682796786
       vertices: []
       indices: 
       edges: []
@@ -283,14 +430,22 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      CharModern_Walk_Glow_0: -799372021
-      CharModern_Walk_Glow_1: 752741193
-      CharModern_Walk_Glow_2: 2084516982
-      CharModern_Walk_Glow_3: -847863490
-      CharModern_Walk_Glow_4: -1785090492
-      CharModern_Walk_Glow_5: 655291064
-      CharModern_Walk_Glow_6: -1897041075
-      CharModern_Walk_Glow_7: 1185552579
+      Medieval_Glow_0: -651910004
+      Medieval_Glow_1: -1401884588
+      Medieval_Glow_10: 1011333121
+      Medieval_Glow_11: -1694269187
+      Medieval_Glow_12: 300715364
+      Medieval_Glow_13: -3219692
+      Medieval_Glow_14: -1682796786
+      Medieval_Glow_15: 1272455090
+      Medieval_Glow_2: 195759983
+      Medieval_Glow_3: -1112493151
+      Medieval_Glow_4: -324637386
+      Medieval_Glow_5: -519295891
+      Medieval_Glow_6: -1203924353
+      Medieval_Glow_7: 182969870
+      Medieval_Glow_8: -2143850188
+      Medieval_Glow_9: -1335846908
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Ethereal
+  m_Name: Ancient
   m_Shader: {fileID: -6465566751694194690, guid: 7d62c0996b3890141836a27261a33daf, type: 3}
   m_ValidKeywords: []
   m_InvalidKeywords: []
@@ -25,7 +25,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _GlowTexture:
-        m_Texture: {fileID: 2800000, guid: 364c309082bbc794bac6f91c9785f065, type: 3}
+        m_Texture: {fileID: 2800000, guid: 029159c483faeec488041b5064c6ce1b, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
@@ -51,5 +51,5 @@ Material:
     m_Ints: []
     m_Floats: []
     m_Colors:
-    - _GlowColor: {r: 2.9960785, g: 1.5372549, b: 0, a: 0}
+    - _GlowColor: {r: 8, g: 8, b: 8, a: 0}
   m_BuildTextureStacks: []

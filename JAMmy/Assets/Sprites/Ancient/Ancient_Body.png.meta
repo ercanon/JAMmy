@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: c8f719e65f04eb741a9995a5dd801988
+guid: 8ff4f8330dd2360449f442b11b8ca49d
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -105,7 +105,175 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: CharMedieval_Walk_0
+      name: Ancient_Body_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5da132a094a10046a870da87211e344
+      internalID: -1467817045
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient_Body_1
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 610ea57b1245d4a45ad66f30b3c1c76f
+      internalID: 1512919077
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient_Body_2
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c57af711c6cbbe4c8f7ec8bff69abb1
+      internalID: -1260153467
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient_Body_3
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6aeb648a953b176419370cb5bcf35c18
+      internalID: -1296282663
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient_Body_4
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab55efe6aa40a6745bf62bf492b28390
+      internalID: 289909824
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient_Body_5
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d630a3ee3f013ef438740d94d71657e6
+      internalID: -229532032
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient_Body_6
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2e3d6956ed1cac4793eaf3c05cf0c6a
+      internalID: -337639407
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient_Body_7
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63e1521f904a33049be596acd9f57e91
+      internalID: -597422761
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ancient_Body_8
       rect:
         serializedVersion: 2
         x: 0
@@ -119,14 +287,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 56dbb7e494380fe48a37741921ff171e
-      internalID: -746975758
+      spriteID: 94f7427bd7881fb419761ca0475b4879
+      internalID: 1863926033
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CharMedieval_Walk_1
+      name: Ancient_Body_9
       rect:
         serializedVersion: 2
         x: 32
@@ -140,14 +308,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a41be1491099f554fb9b16469f799012
-      internalID: -1736718335
+      spriteID: f932c369ff5521c4c9ad4b58c5bed190
+      internalID: 994600764
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CharMedieval_Walk_2
+      name: Ancient_Body_10
       rect:
         serializedVersion: 2
         x: 64
@@ -161,14 +329,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 277a4792a039b504c9ac6b73305a48f1
-      internalID: 2095184047
+      spriteID: 13427a7bf01085949ba0a06b2fd07b08
+      internalID: 1798540837
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CharMedieval_Walk_3
+      name: Ancient_Body_11
       rect:
         serializedVersion: 2
         x: 96
@@ -182,14 +350,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8869dd6c1d6cfb74b80c376584989deb
-      internalID: -2051062178
+      spriteID: 53e60095a1391824681ab2738c446d3e
+      internalID: -1557193891
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CharMedieval_Walk_4
+      name: Ancient_Body_12
       rect:
         serializedVersion: 2
         x: 128
@@ -203,14 +371,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0a5c2d03c0e6ae74fba80bd6e98cab33
-      internalID: 1686152377
+      spriteID: fab1edc45ba0e5c4c93eaa64ef28d469
+      internalID: -1677004636
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CharMedieval_Walk_5
+      name: Ancient_Body_13
       rect:
         serializedVersion: 2
         x: 160
@@ -224,14 +392,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8d72489bf66abd64591f8c5139235dde
-      internalID: -55066571
+      spriteID: 804d61a4525d87e47aa92aa56a96df5c
+      internalID: -440069936
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CharMedieval_Walk_6
+      name: Ancient_Body_14
       rect:
         serializedVersion: 2
         x: 192
@@ -245,29 +413,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 99492e3242136504d8d969d7ffd0bce9
-      internalID: -1853118561
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: CharMedieval_Walk_7
-      rect:
-        serializedVersion: 2
-        x: 224
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 67854e2f1c46aa34596f1d9ca7a1698f
-      internalID: -1988390508
+      spriteID: b58aeff6738c18c44b82c9ab257d9587
+      internalID: 964108766
       vertices: []
       indices: 
       edges: []
@@ -281,16 +428,25 @@ TextureImporter:
     indices: 
     edges: []
     weights: []
-    secondaryTextures: []
+    secondaryTextures:
+    - texture: {fileID: 2800000, guid: 029159c483faeec488041b5064c6ce1b, type: 3}
+      name: Glow
     nameFileIdTable:
-      CharMedieval_Walk_0: -746975758
-      CharMedieval_Walk_1: -1736718335
-      CharMedieval_Walk_2: 2095184047
-      CharMedieval_Walk_3: -2051062178
-      CharMedieval_Walk_4: 1686152377
-      CharMedieval_Walk_5: -55066571
-      CharMedieval_Walk_6: -1853118561
-      CharMedieval_Walk_7: -1988390508
+      Ancient_Body_0: -1467817045
+      Ancient_Body_1: 1512919077
+      Ancient_Body_10: 1798540837
+      Ancient_Body_11: -1557193891
+      Ancient_Body_12: -1677004636
+      Ancient_Body_13: -440069936
+      Ancient_Body_14: 964108766
+      Ancient_Body_2: -1260153467
+      Ancient_Body_3: -1296282663
+      Ancient_Body_4: 289909824
+      Ancient_Body_5: -229532032
+      Ancient_Body_6: -337639407
+      Ancient_Body_7: -597422761
+      Ancient_Body_8: 1863926033
+      Ancient_Body_9: 994600764
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

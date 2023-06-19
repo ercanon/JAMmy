@@ -9,9 +9,12 @@ TagManager:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Light
   - Water
   - UI
+  - Player
+  - BackGround
+  - Items
   - 
   - 
   - 
@@ -34,11 +37,17 @@ TagManager:
   - 
   - 
   - 
-  - 
-  - 
-  - 
-  - 
+  - Camera
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Player
+    uniqueID: 1235805811
+    locked: 0
+  - name: BackGround
+    uniqueID: 181423837
+    locked: 0
+  - name: Items
+    uniqueID: 2242697583
     locked: 0

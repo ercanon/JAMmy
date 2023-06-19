@@ -27,7 +27,7 @@ public class PlayerMovement : MonoBehaviour
         input = GetComponent<PlayerInput>();
         anim = transform.GetChild(0).GetComponent<Animator>();
 
-        cState = CharacterState.Pause;
+        cState = CharacterState.Idle;
     }
 
     private void OnEnable()

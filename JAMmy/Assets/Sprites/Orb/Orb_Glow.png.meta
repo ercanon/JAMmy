@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 687345b7d4e823b4eb3e4779c9d73cf7
+guid: 2a06646ccac58c648968bfd10e728c4a
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -67,10 +67,10 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 256
+    maxTextureSize: 512
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -105,13 +105,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: CharMedieval_Idle_0
+      name: Orb_Glow_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 32
-        height: 32
+        width: 48
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -119,20 +119,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f2ffa07641ed39745a783ea1ffb2f928
-      internalID: -142597335
+      spriteID: d67fa52ce0eb46a40b8fe9b0cc557d1f
+      internalID: 1374542883
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CharMedieval_Idle_1
+      name: Orb_Glow_1
       rect:
         serializedVersion: 2
-        x: 32
+        x: 48
         y: 0
-        width: 32
-        height: 32
+        width: 48
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -140,41 +140,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6474706bf2a25284e89cadfaf2e0a77d
-      internalID: -2064331928
+      spriteID: c1cd529d2f2b2294193a3fafcdfe747d
+      internalID: -406883081
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CharMedieval_Idle_2
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 24871fb7b6d7d6343a140d6faf2cabad
-      internalID: -1168184772
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: CharMedieval_Idle_3
+      name: Orb_Glow_2
       rect:
         serializedVersion: 2
         x: 96
         y: 0
-        width: 32
-        height: 32
+        width: 48
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -182,20 +161,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0e87e75e230c8a643a5b3daf6b8384f7
-      internalID: -935484477
+      spriteID: 15f401e940c97164fb63649dafbe159a
+      internalID: 272485704
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CharMedieval_Idle_4
+      name: Orb_Glow_3
       rect:
         serializedVersion: 2
-        x: 128
+        x: 144
         y: 0
-        width: 32
-        height: 32
+        width: 48
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -203,41 +182,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b7667e998f251624687ebb753f6808d9
-      internalID: -1729278838
+      spriteID: c8fb6b1b8b07f144396abd37e9c760f5
+      internalID: 1250905093
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CharMedieval_Idle_5
-      rect:
-        serializedVersion: 2
-        x: 160
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f1a679b7b37348b41aefdf285816ecdd
-      internalID: -1012297072
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: CharMedieval_Idle_6
+      name: Orb_Glow_4
       rect:
         serializedVersion: 2
         x: 192
         y: 0
-        width: 32
-        height: 32
+        width: 48
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -245,8 +203,50 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 11fc65ca8b37ce14aa9c13943df14d0a
-      internalID: 1723226204
+      spriteID: 6bd4f172eccf9ff4cb0f8023c8e92c2d
+      internalID: -1520330096
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Orb_Glow_5
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 0
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af314cd4e5569b048a5ccd7e97dd137a
+      internalID: 1765858877
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Orb_Glow_6
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 0
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab696f75834ae58418dae4fea7b34673
+      internalID: -1502738531
       vertices: []
       indices: 
       edges: []
@@ -262,13 +262,13 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      CharMedieval_Idle_0: -142597335
-      CharMedieval_Idle_1: -2064331928
-      CharMedieval_Idle_2: -1168184772
-      CharMedieval_Idle_3: -935484477
-      CharMedieval_Idle_4: -1729278838
-      CharMedieval_Idle_5: -1012297072
-      CharMedieval_Idle_6: 1723226204
+      Orb_Glow_0: 1374542883
+      Orb_Glow_1: -406883081
+      Orb_Glow_2: 272485704
+      Orb_Glow_3: 1250905093
+      Orb_Glow_4: -1520330096
+      Orb_Glow_5: 1765858877
+      Orb_Glow_6: -1502738531
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
