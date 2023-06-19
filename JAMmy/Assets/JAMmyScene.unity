@@ -451,7 +451,7 @@ MonoBehaviour:
     m_ActionName: Menu Controller/Join[/XInputControllerWindows/start,/Keyboard/leftCtrl,/Keyboard/rightCtrl]
   m_NeverAutoSwitchControlSchemes: 1
   m_DefaultControlScheme: Keyboard
-  m_DefaultActionMap: Player Controller
+  m_DefaultActionMap: Menu Controller
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 1724319189}
 --- !u!95 &202448297
@@ -3421,7 +3421,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Actions: {fileID: -944628639613478452, guid: 9c77133dab1e23348a411746158586b7, type: 3}
   m_NotificationBehavior: 2
-  m_UIInputModule: {fileID: 0}
+  m_UIInputModule: {fileID: 666099980}
   m_DeviceLostEvent:
     m_PersistentCalls:
       m_Calls:
@@ -3835,7 +3835,7 @@ MonoBehaviour:
     m_ActionName: Menu Controller/Join[/XInputControllerWindows/start,/Keyboard/leftCtrl,/Keyboard/rightCtrl]
   m_NeverAutoSwitchControlSchemes: 1
   m_DefaultControlScheme: 
-  m_DefaultActionMap: Player Controller
+  m_DefaultActionMap: Menu Controller
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 2084797324}
 --- !u!95 &2018085661
