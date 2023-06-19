@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Modern 2
+  m_Name: Medieval
   m_Shader: {fileID: -6465566751694194690, guid: 7d62c0996b3890141836a27261a33daf, type: 3}
   m_ValidKeywords: []
   m_InvalidKeywords: []

@@ -389,7 +389,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 474933786}
         m_TargetAssemblyTypeName: PlayerMovement, Assembly-CSharp
-        m_MethodName: OnEnter
+        m_MethodName: OnSubmit
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -434,7 +434,19 @@ MonoBehaviour:
     m_ActionId: 45798e83-3a36-45d1-9d70-e9f47318dc7e
     m_ActionName: Menu Controller/Cancel[/Keyboard/e]
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 474933786}
+        m_TargetAssemblyTypeName: PlayerMovement, Assembly-CSharp
+        m_MethodName: OnJoin
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: e188c383-bb21-4c70-8e4f-0782b350e382
     m_ActionName: Menu Controller/Join[/XInputControllerWindows/start,/Keyboard/leftCtrl,/Keyboard/rightCtrl]
   m_NeverAutoSwitchControlSchemes: 1
@@ -1051,19 +1063,7 @@ MonoBehaviour:
         m_CallState: 2
   m_PlayerLeftEvent:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1624260462}
-        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: onLeftPlayer
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   m_JoinAction:
     m_UseReference: 1
     m_Action:
@@ -1217,7 +1217,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1357587513}
         m_TargetAssemblyTypeName: PlayerMovement, Assembly-CSharp
-        m_MethodName: OnEnter
+        m_MethodName: OnSubmit
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1262,7 +1262,19 @@ MonoBehaviour:
     m_ActionId: 45798e83-3a36-45d1-9d70-e9f47318dc7e
     m_ActionName: Menu Controller/Cancel[/Keyboard/e]
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1357587513}
+        m_TargetAssemblyTypeName: PlayerMovement, Assembly-CSharp
+        m_MethodName: OnJoin
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: e188c383-bb21-4c70-8e4f-0782b350e382
     m_ActionName: Menu Controller/Join[/XInputControllerWindows/start,/Keyboard/leftCtrl,/Keyboard/rightCtrl]
   m_NeverAutoSwitchControlSchemes: 1
@@ -2867,10 +2879,10 @@ MonoBehaviour:
   render: {fileID: 1211401566}
   events: {fileID: 666099981}
   characters:
-  - {fileID: 202448294}
   - {fileID: 1929018019}
   - {fileID: 783079956}
   - {fileID: 2018085658}
+  - {fileID: 202448294}
   timer: 3
 --- !u!81 &1624260463
 AudioListener:
@@ -2889,7 +2901,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1672062206}
-  - component: {fileID: 1672062211}
+  - component: {fileID: 1672062210}
   - component: {fileID: 1672062208}
   - component: {fileID: 1672062209}
   m_Layer: 6
@@ -2953,7 +2965,7 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 0.5, y: 1}
   m_Direction: 0
---- !u!114 &1672062211
+--- !u!114 &1672062210
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3338,11 +3350,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Actions: {fileID: -944628639613478452, guid: 9c77133dab1e23348a411746158586b7, type: 3}
   m_NotificationBehavior: 2
-  m_UIInputModule: {fileID: 666099980}
+  m_UIInputModule: {fileID: 0}
   m_DeviceLostEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1672062211}
+      - m_Target: {fileID: 1672062210}
         m_TargetAssemblyTypeName: PlayerMovement, Assembly-CSharp
         m_MethodName: OnDeviceLost
         m_Mode: 1
@@ -3357,7 +3369,7 @@ MonoBehaviour:
   m_DeviceRegainedEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1672062211}
+      - m_Target: {fileID: 1672062210}
         m_TargetAssemblyTypeName: PlayerMovement, Assembly-CSharp
         m_MethodName: OnDeviceRegained
         m_Mode: 1
@@ -3372,7 +3384,7 @@ MonoBehaviour:
   m_ControlsChangedEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1672062211}
+      - m_Target: {fileID: 1672062210}
         m_TargetAssemblyTypeName: PlayerMovement, Assembly-CSharp
         m_MethodName: OnControlsChanged
         m_Mode: 1
@@ -3387,7 +3399,7 @@ MonoBehaviour:
   m_ActionEvents:
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1672062211}
+      - m_Target: {fileID: 1672062210}
         m_TargetAssemblyTypeName: PlayerMovement, Assembly-CSharp
         m_MethodName: OnMovement
         m_Mode: 0
@@ -3403,7 +3415,7 @@ MonoBehaviour:
     m_ActionName: Player Controller/Movement[/Keyboard/w,/Keyboard/s,/Keyboard/a,/Keyboard/d,/Keyboard/upArrow,/Keyboard/downArrow,/Keyboard/leftArrow,/Keyboard/rightArrow]
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1672062211}
+      - m_Target: {fileID: 1672062210}
         m_TargetAssemblyTypeName: PlayerMovement, Assembly-CSharp
         m_MethodName: OnHability1
         m_Mode: 0
@@ -3419,9 +3431,9 @@ MonoBehaviour:
     m_ActionName: Player Controller/Ability1
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1672062211}
+      - m_Target: {fileID: 1672062210}
         m_TargetAssemblyTypeName: PlayerMovement, Assembly-CSharp
-        m_MethodName: OnEnter
+        m_MethodName: OnSubmit
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3435,7 +3447,7 @@ MonoBehaviour:
     m_ActionName: Menu Controller/New action
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1672062211}
+      - m_Target: {fileID: 1672062210}
         m_TargetAssemblyTypeName: PlayerMovement, Assembly-CSharp
         m_MethodName: OnMenuMove
         m_Mode: 0
@@ -3451,7 +3463,7 @@ MonoBehaviour:
     m_ActionName: Menu Controller/Move[/Keyboard/w,/Keyboard/d,/Keyboard/a,/Keyboard/upArrow,/Keyboard/downArrow,/Keyboard/leftArrow,/Keyboard/rightArrow]
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1672062211}
+      - m_Target: {fileID: 1672062210}
         m_TargetAssemblyTypeName: PlayerMovement, Assembly-CSharp
         m_MethodName: OnCancel
         m_Mode: 0
@@ -3466,7 +3478,19 @@ MonoBehaviour:
     m_ActionId: 45798e83-3a36-45d1-9d70-e9f47318dc7e
     m_ActionName: Menu Controller/Cancel[/Keyboard/e]
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1672062210}
+        m_TargetAssemblyTypeName: PlayerMovement, Assembly-CSharp
+        m_MethodName: OnJoin
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: e188c383-bb21-4c70-8e4f-0782b350e382
     m_ActionName: Menu Controller/Join[/XInputControllerWindows/start,/Keyboard/leftCtrl,/Keyboard/rightCtrl]
   m_NeverAutoSwitchControlSchemes: 1
@@ -3515,7 +3539,7 @@ SpriteRenderer:
   m_SortingLayerID: 1235805811
   m_SortingLayer: 1
   m_SortingOrder: 0
-  m_Sprite: {fileID: -1058495788, guid: 8ff4f8330dd2360449f442b11b8ca49d, type: 3}
+  m_Sprite: {fileID: 1863926033, guid: 8ff4f8330dd2360449f442b11b8ca49d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -3547,71 +3571,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!1001 &1994941396
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 7849104267920188929, guid: 3a2775b140aca914d978c3c1ab33e8b4, type: 3}
-      propertyPath: m_RootOrder
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 7849104267920188929, guid: 3a2775b140aca914d978c3c1ab33e8b4, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -10.29
-      objectReference: {fileID: 0}
-    - target: {fileID: 7849104267920188929, guid: 3a2775b140aca914d978c3c1ab33e8b4, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 6.11
-      objectReference: {fileID: 0}
-    - target: {fileID: 7849104267920188929, guid: 3a2775b140aca914d978c3c1ab33e8b4, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7849104267920188929, guid: 3a2775b140aca914d978c3c1ab33e8b4, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7849104267920188929, guid: 3a2775b140aca914d978c3c1ab33e8b4, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7849104267920188929, guid: 3a2775b140aca914d978c3c1ab33e8b4, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7849104267920188929, guid: 3a2775b140aca914d978c3c1ab33e8b4, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7849104267920188929, guid: 3a2775b140aca914d978c3c1ab33e8b4, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7849104267920188929, guid: 3a2775b140aca914d978c3c1ab33e8b4, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7849104267920188929, guid: 3a2775b140aca914d978c3c1ab33e8b4, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7849104267920188931, guid: 3a2775b140aca914d978c3c1ab33e8b4, type: 3}
-      propertyPath: m_SortingLayer
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 7849104267920188932, guid: 3a2775b140aca914d978c3c1ab33e8b4, type: 3}
-      propertyPath: m_Name
-      value: Orb
-      objectReference: {fileID: 0}
-    - target: {fileID: 7849104267920188932, guid: 3a2775b140aca914d978c3c1ab33e8b4, type: 3}
-      propertyPath: m_Layer
-      value: 8
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 3a2775b140aca914d978c3c1ab33e8b4, type: 3}
 --- !u!1 &2018085658
 GameObject:
   m_ObjectHideFlags: 0
@@ -3743,7 +3702,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 277554128}
         m_TargetAssemblyTypeName: PlayerMovement, Assembly-CSharp
-        m_MethodName: OnEnter
+        m_MethodName: OnSubmit
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3788,7 +3747,19 @@ MonoBehaviour:
     m_ActionId: 45798e83-3a36-45d1-9d70-e9f47318dc7e
     m_ActionName: Menu Controller/Cancel[/Keyboard/e]
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 277554128}
+        m_TargetAssemblyTypeName: PlayerMovement, Assembly-CSharp
+        m_MethodName: OnJoin
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: e188c383-bb21-4c70-8e4f-0782b350e382
     m_ActionName: Menu Controller/Join[/XInputControllerWindows/start,/Keyboard/leftCtrl,/Keyboard/rightCtrl]
   m_NeverAutoSwitchControlSchemes: 1

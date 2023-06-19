@@ -15,7 +15,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI render;
     [SerializeField] private MultiplayerEventSystem events;
     [SerializeField] private List<GameObject> characters;
-    private int playerCount;
+    private bool[] charAvailable;
     private List<Vector2> initPos;
 
     private GameState gState;
@@ -30,7 +30,7 @@ public class GameManager : MonoBehaviour
         Cursor.lockState = CursorLockMode.Locked;
         gState = GameState.MenuScreen;
 
-        playerCount = 0;
+        charAvailable = new bool[]{ true, true, true, true};
 
         initPos = new List<Vector2>();
         foreach (GameObject go in characters)
@@ -72,18 +72,31 @@ public class GameManager : MonoBehaviour
 
         if (gState == GameState.MenuScreen)
         {
-            characters[playerCount].SetActive(true);
+            for (int pos = 0; pos < characters.Count; pos++)
+            {
+                if (charAvailable[pos])
+                {
+                    if (!characters[pos].activeInHierarchy)
+                    {
+                        characters[pos].SetActive(true);
+                        characters[pos].GetComponentInParent<PlayerMovement>().InitialSet(this, pos);
+                    }
 
-            if (input.actions != null) playerCount++;
+                    if (input.actions != null)
+                        charAvailable[pos] = false;
+
+                    break;
+                }
+            }
         }
     }
 
-    public void onLeftPlayer(PlayerInput input)
+    public void onLeftPlayer(int charPos)
     {
-        if (gState == GameState.MenuScreen && input.actions != null)
+        if (gState == GameState.MenuScreen)
         {
-            playerCount--;
-            characters[playerCount].SetActive(false);
+            characters[charPos].SetActive(false);
+            charAvailable[charPos] = true;
         }
     }
 
@@ -96,10 +109,7 @@ public class GameManager : MonoBehaviour
 
         foreach (GameObject player in characters)
             if (player.activeInHierarchy)
-            {
-                player.GetComponent<PlayerInput>().enabled = true;
-                player.transform.parent.GetComponent<PlayerMovement>().SetCharacterState(1);
-            }
+                player.GetComponentInParent<PlayerMovement>().SetCharacterState(1);
     }
 
     public void onSettings()

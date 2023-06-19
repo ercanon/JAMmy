@@ -10,13 +10,14 @@ public class PlayerMovement : MonoBehaviour
 
     /* ----- VARIABLES ----- */
     private Rigidbody2D playerRB;
-    private PlayerInput input;
     private Animator anim;
+    private GameManager gameMan;
 
     [SerializeField] private float movementSpeed;
     private Vector2 inputMovement;
     private CharacterState cState;
     private CharacterDirection cDir;
+    private int charID;
 
 
 
@@ -24,15 +25,19 @@ public class PlayerMovement : MonoBehaviour
     void Start()
     {
         playerRB = GetComponent<Rigidbody2D>();
-        input = GetComponent<PlayerInput>();
-        anim = transform.GetChild(0).GetComponent<Animator>();
+        anim = transform.GetChild(0).gameObject.GetComponent<Animator>();
 
-        cState = CharacterState.Idle;
+        cState = CharacterState.Pause;
     }
 
     private void OnEnable()
     {
         
+    }
+
+    private void OnDisable()
+    {
+
     }
 
     void FixedUpdate()
@@ -44,6 +49,12 @@ public class PlayerMovement : MonoBehaviour
             cState = CharacterState.Idle;
             anim.SetBool("Walking", false);
         }
+    }
+
+    public void InitialSet(GameManager gm, int id)
+    {
+        gameMan = gm;
+        charID = id;
     }
 
     public void SetCharacterState(int state)
@@ -84,7 +95,7 @@ public class PlayerMovement : MonoBehaviour
 
 
     /* ----- MENU CONTROLLER ----- */
-    public void OnEnter(InputAction.CallbackContext value)
+    public void OnSubmit(InputAction.CallbackContext value)
     {
         if (value.started)
         {
@@ -104,7 +115,15 @@ public class PlayerMovement : MonoBehaviour
     {
         if (value.started)
         {
-            transform.GetChild(0).gameObject.SetActive(false);
+            gameMan.onLeftPlayer(charID);
+        }
+    }
+
+    public void OnJoin(InputAction.CallbackContext value)
+    {
+        if (value.started)
+        {
+
         }
     }
 
