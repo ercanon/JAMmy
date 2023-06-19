@@ -15,7 +15,11 @@ public class PlayerMovement : MonoBehaviour
     private SpriteRenderer sprite;
     private GameManager gameMan;
 
-    [SerializeField] private float movementSpeed;
+    [SerializeField] private Component Ability1;
+    [SerializeField] private GameObject Ability2;
+    [SerializeField] private GameObject Ability3;
+
+    public float movementSpeed;
     private Transform canvaOrb;
     private int orbCount;
     private Vector2 inputMovement;
@@ -94,7 +98,15 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    public void OnHability1(InputAction.CallbackContext value)
+    public void OnAbility1(InputAction.CallbackContext value)
+    {
+        if (value.started)
+        {
+            Ability1.SendMessage("StartAction");
+        }
+    }
+
+    public void OnAbility2(InputAction.CallbackContext value)
     {
         if (value.started)
         {
@@ -102,15 +114,7 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    public void OnHability2(InputAction.CallbackContext value)
-    {
-        if (value.started)
-        {
-
-        }
-    }
-
-    public void OnHability3(InputAction.CallbackContext value)
+    public void OnAbility3(InputAction.CallbackContext value)
     {
         if (value.started)
         {

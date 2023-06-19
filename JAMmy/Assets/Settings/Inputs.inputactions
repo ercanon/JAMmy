@@ -15,7 +15,7 @@
                     "initialStateCheck": true
                 },
                 {
-                    "name": "Hability1",
+                    "name": "Ability1",
                     "type": "Button",
                     "id": "b7909e45-9c67-4862-8b55-f8f60bc89d0c",
                     "expectedControlType": "Button",
@@ -24,7 +24,7 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "Hability2",
+                    "name": "Ability2",
                     "type": "Button",
                     "id": "25ae94c0-df09-412e-8f6d-8bcdefa638df",
                     "expectedControlType": "Button",
@@ -33,7 +33,7 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "Hability3",
+                    "name": "Ability3",
                     "type": "Button",
                     "id": "d3067ac4-98da-4278-a0fd-0fe656123aba",
                     "expectedControlType": "Button",
@@ -154,7 +154,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "GamePad",
-                    "action": "Hability2",
+                    "action": "Ability2",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -165,7 +165,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Keyboard",
-                    "action": "Hability2",
+                    "action": "Ability2",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -176,7 +176,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "GamePad",
-                    "action": "Hability3",
+                    "action": "Ability3",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -187,7 +187,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Keyboard",
-                    "action": "Hability3",
+                    "action": "Ability3",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -198,7 +198,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "GamePad",
-                    "action": "Hability1",
+                    "action": "Ability1",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -209,7 +209,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Keyboard",
-                    "action": "Hability1",
+                    "action": "Ability1",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },

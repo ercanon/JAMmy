@@ -50,7 +50,6 @@ public class GameManager : MonoBehaviour
         startCond.interactable = false;
 
         countDown = timer * 60;
-        timerCoroutine = StartTimer();
     }
 
     void Update()
@@ -143,7 +142,6 @@ public class GameManager : MonoBehaviour
             {
                 cameraList[posLists].rect = cameraList[posLists + 1].rect;
                 initPos[posLists] = initPos[posLists + 1];
-
             }
 
             characters[posLists].transform.parent.position = initPos[posLists];
@@ -159,6 +157,7 @@ public class GameManager : MonoBehaviour
     {
         gState = GameState.GamePlayScreen;
 
+        timerCoroutine = StartTimer();
         StartCoroutine(timerCoroutine);
 
         for (int list = 0; list < characters.Count; list++)
