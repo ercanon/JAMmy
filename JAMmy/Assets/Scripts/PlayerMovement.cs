@@ -11,6 +11,7 @@ public class PlayerMovement : MonoBehaviour
     /* ----- VARIABLES ----- */
     private Rigidbody2D playerRB;
     private Animator anim;
+    private PlayerInput inputs;
     private GameManager gameMan;
 
     [SerializeField] private float movementSpeed;
@@ -25,7 +26,9 @@ public class PlayerMovement : MonoBehaviour
     void Start()
     {
         playerRB = GetComponent<Rigidbody2D>();
-        anim = transform.GetChild(0).gameObject.GetComponent<Animator>();
+        GameObject child = transform.GetChild(0).gameObject;
+        anim   = child.GetComponent<Animator>();
+        inputs = child.GetComponent<PlayerInput>();
 
         cState = CharacterState.Pause;
     }
@@ -60,6 +63,7 @@ public class PlayerMovement : MonoBehaviour
     public void SetCharacterState(int state)
     {
         cState = (CharacterState)state;
+        inputs.SwitchCurrentActionMap("Player Controller");
     }
 
     /* ----- GAME CONTROLLER ----- */
