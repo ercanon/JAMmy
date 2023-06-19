@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using UnityEngine.InputSystem.UI;
+using UnityEngine.UI;
 using TMPro;
 
 
@@ -12,16 +12,25 @@ public class GameManager : MonoBehaviour
     enum GameState { MenuScreen, GamePlayScreen, EndScreen, Transition };
 
     /* ----- VARIABLES ----- */
+    [Header("General")]
     [SerializeField] private TextMeshProUGUI render;
-    [SerializeField] private MultiplayerEventSystem events;
     [SerializeField] private List<GameObject> characters;
-    [SerializeField] private List<Camera> cameras;
+    [SerializeField] private List<Camera> cameraList;
     private bool[] charAvailable;
     private List<Vector2> initPos = new List<Vector2>();
-
     private GameState gState;
+
+    [Space]
+    [Header("Menus")]
+    [SerializeField] private Button startCond;
+
+    [Space]
+    [Header("PlayState")]
     [SerializeField] private float timer;
+    private float countDown;
     private IEnumerator timerCoroutine;
+    [SerializeField] private GameObject Orb;
+    [SerializeField] private List<Vector2> OrbSpawn;
 
 
 
@@ -38,9 +47,10 @@ public class GameManager : MonoBehaviour
         initPos.Add(characters[3].transform.position);
         initPos.Add(characters[1].transform.position);
 
-        timer *= 60;
+        startCond.interactable = false;
+
+        countDown = timer * 60;
         timerCoroutine = StartTimer();
-        StartCoroutine(timerCoroutine);
     }
 
     void Update()
@@ -52,13 +62,13 @@ public class GameManager : MonoBehaviour
     {
         while (true)
         {
-            timer -= Time.deltaTime;
-            int min = (int)(timer / 60f);
-            int sec = (int)(timer - min * 60);
+            countDown -= Time.deltaTime;
+            int min = (int)(countDown / 60f);
+            int sec = (int)(countDown - min * 60);
 
             render.text = string.Format("{0:0}:{1:00}", min, sec);
 
-            if (timer <= 0)
+            if (countDown <= 0)
                 StopCoroutine(timerCoroutine);
 
             yield return null;
@@ -90,6 +100,11 @@ public class GameManager : MonoBehaviour
                     break;
                 }
             }
+
+            //foreach (bool check in charAvailable)
+            //    if (check == true)
+            //        return;
+            startCond.interactable = true; 
         }
     }
 
@@ -102,6 +117,41 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    public void WinCond()
+    {
+        foreach (Camera cam in cameraList)
+            cam.GetComponent<AuroraManager>().ClearList();
+
+        StopCoroutine(timerCoroutine);
+        countDown = timer * 60;
+
+        foreach (GameObject player in characters)
+            if (player.activeInHierarchy)
+                player.GetComponentInParent<PlayerMovement>().SetCharacter(1);
+
+        Rect auxRect = cameraList[0].rect;
+        Vector2 auxVec = initPos[0];
+        int listsSize = cameraList.Count;
+        for (int posLists = 0; posLists < listsSize; posLists++)
+        {
+            if (posLists + 1 == listsSize)
+            {
+                cameraList[posLists].rect = auxRect;
+                initPos[posLists] = auxVec;
+            }
+            else
+            {
+                cameraList[posLists].rect = cameraList[posLists + 1].rect;
+                initPos[posLists] = initPos[posLists + 1];
+
+            }
+
+            characters[posLists].transform.parent.position = initPos[posLists];
+        }
+
+        onPlay();
+    }
+
 
 
     /* ----- MENU BUTTONS ----- */
@@ -109,32 +159,34 @@ public class GameManager : MonoBehaviour
     {
         gState = GameState.GamePlayScreen;
 
-        foreach (GameObject player in characters)
-            if (player.activeInHierarchy)
-                player.GetComponentInParent<PlayerMovement>().SetCharacterState(1);
+        StartCoroutine(timerCoroutine);
+
+        for (int list = 0; list < characters.Count; list++)
+        {
+            if (characters[list].activeInHierarchy)
+            {
+                AuroraManager orbList = cameraList[list].GetComponent<AuroraManager>();
+
+                int[] genNum = { Random.Range(0, 14), Random.Range(0, 14), Random.Range(0, 14) };
+                for (int index = 0; index < genNum.Length; index++)
+                {
+                    while (genNum[0] == genNum[index] && index != 0)
+                        genNum[index] = Random.Range(0, 14);
+
+                    Vector3 spawn = characters[list].transform.position;
+                    spawn += (Vector3)OrbSpawn[genNum[index]];
+
+                    orbList.orbTrans.Add(Instantiate(Orb, spawn, Quaternion.identity));
+                }
+
+                characters[list].GetComponentInParent<PlayerMovement>().SetCharacter(1);
+            }
+        }
     }
 
     public void onSettings()
     {
-        Rect auxRect = cameras[0].rect;
-        Vector2 auxVec = initPos[0];
-        int listsSize = cameras.Count;
-        for (int posLists = 0; posLists < listsSize; posLists++)
-        {
-            if (posLists + 1 == listsSize)
-            {
-                cameras[posLists].rect = auxRect;
-                initPos[posLists] = auxVec;
-            }
-            else
-            {
-                cameras[posLists].rect = cameras[posLists + 1].rect;
-                initPos[posLists] = initPos[posLists + 1];
-
-            }
-
-            characters[posLists].transform.parent.position = initPos[posLists];
-        }
+       
     }
 
     public void onCredits()

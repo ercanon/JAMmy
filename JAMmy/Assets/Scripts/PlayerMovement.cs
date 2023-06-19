@@ -12,9 +12,12 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody2D playerRB;
     private Animator anim;
     private PlayerInput inputs;
+    private SpriteRenderer sprite;
     private GameManager gameMan;
 
     [SerializeField] private float movementSpeed;
+    private Transform canvaOrb;
+    private int orbCount;
     private Vector2 inputMovement;
     private CharacterState cState;
     private CharacterDirection cDir;
@@ -27,15 +30,16 @@ public class PlayerMovement : MonoBehaviour
     {
         playerRB = GetComponent<Rigidbody2D>();
         GameObject child = transform.GetChild(0).gameObject;
-        anim   = child.GetComponent<Animator>();
+        anim = child.GetComponent<Animator>();
         inputs = child.GetComponent<PlayerInput>();
+        sprite = child.GetComponent<SpriteRenderer>();
 
         cState = CharacterState.Pause;
     }
 
     private void OnEnable()
     {
-        
+
     }
 
     private void OnDisable()
@@ -60,10 +64,11 @@ public class PlayerMovement : MonoBehaviour
         charID = id;
     }
 
-    public void SetCharacterState(int state)
+    public void SetCharacter(int state)
     {
         cState = (CharacterState)state;
         inputs.SwitchCurrentActionMap("Player Controller");
+        orbCount = 0;
     }
 
     /* ----- GAME CONTROLLER ----- */
@@ -79,12 +84,12 @@ public class PlayerMovement : MonoBehaviour
             if (inputMovement.x < 0 && cDir != CharacterDirection.Left)
             {
                 cDir = CharacterDirection.Left;
-                transform.localScale = new Vector3(-1, 1, 1);
+                sprite.flipX = true;
             }
             else if (inputMovement.x > 0 && cDir != CharacterDirection.Right)
             {
                 cDir = CharacterDirection.Right;
-                transform.localScale = new Vector3(1, 1, 1);
+                sprite.flipX = false;
             }
         }
     }
@@ -94,6 +99,34 @@ public class PlayerMovement : MonoBehaviour
         if (value.started)
         {
 
+        }
+    }
+
+    public void OnCollisionEnter2D(Collision2D collision)
+    {
+        switch (collision.gameObject.tag)
+        {
+            case "Orb":
+                if (canvaOrb == null)
+                {
+                    canvaOrb = collision.transform;
+
+                    collision.collider.isTrigger = true;
+                    canvaOrb.SetParent(transform);
+                    canvaOrb.localScale *= 0.6f;
+                    canvaOrb.localPosition = new Vector3(0, 0.7f, 0);
+                }
+                break;
+
+            case "Beacon":
+                if (canvaOrb != null)
+                { 
+                    orbCount++;
+                    Destroy(canvaOrb.gameObject);
+                    if (orbCount >= 3)
+                        gameMan.WinCond();
+                }
+                break;
         }
     }
 
