@@ -48,8 +48,11 @@ TagManager:
   - name: BackGround
     uniqueID: 181423837
     locked: 0
-  - name: Items
+  - name: Habilities
     uniqueID: 2242697583
+    locked: 0
+  - name: Orbs
+    uniqueID: 2649758133
     locked: 0
   - name: Player
     uniqueID: 1235805811

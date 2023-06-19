@@ -29,7 +29,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Mask:
-        m_Texture: {fileID: 10300, guid: 0000000000000000f000000000000000, type: 0}
+        m_Texture: {fileID: 2800000, guid: 338b612dacacbfa46b1d5baa89760bb9, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MaskTex:
@@ -54,19 +54,19 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _Dissolve_Power: 2
+    - _Dissolve_Power: 1.5
     - _EnableExternalAlpha: 0
-    - _Mask_Power: 1
+    - _Mask_Power: 1.2
     - _Noise_Scale: 30
     - _Wobble_Amount: 0.5
     - _Wobble_Distance: 0.5
     - _Wobble_Frequency: 2
-    - _Wobble_Speed: 1
+    - _Wobble_Speed: 1.8
     m_Colors:
-    - _Color: {r: 12.862745, g: 0, b: 16, a: 1}
+    - _Color: {r: 4.8313727, g: 0, b: 5.992157, a: 1}
     - _Flip: {r: 1, g: 1, b: 1, a: 1}
     - _Noise_Speed: {r: 0, g: -0.25, b: 0, a: 0}
-    - _Noise_Tiiling: {r: 7, g: 0.1, b: 0, a: 0}
+    - _Noise_Tiiling: {r: 5, g: 0.1, b: 0, a: 0}
     - _RendererColor: {r: 1, g: 1, b: 1, a: 1}
     - _Vector3: {r: 0, g: 0, b: 0, a: 0}
   m_BuildTextureStacks: []

@@ -102,6 +102,46 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
+    public void OnHability2(InputAction.CallbackContext value)
+    {
+        if (value.started)
+        {
+
+        }
+    }
+
+    public void OnHability3(InputAction.CallbackContext value)
+    {
+        if (value.started)
+        {
+
+        }
+    }
+
+    public void OnCancelHability(InputAction.CallbackContext value)
+    {
+        if (value.started)
+        {
+
+        }
+    }
+
+    public void OnEnemy1(InputAction.CallbackContext value)
+    {
+        if (value.started)
+        {
+
+        }
+    }
+
+    public void OnEnemy2(InputAction.CallbackContext value)
+    {
+        if (value.started)
+        {
+
+        }
+    }
+
     public void OnCollisionEnter2D(Collision2D collision)
     {
         switch (collision.gameObject.tag)
