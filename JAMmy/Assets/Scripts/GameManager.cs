@@ -15,8 +15,9 @@ public class GameManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI render;
     [SerializeField] private MultiplayerEventSystem events;
     [SerializeField] private List<GameObject> characters;
+    [SerializeField] private List<Camera> cameras;
     private bool[] charAvailable;
-    private List<Vector2> initPos;
+    private List<Vector2> initPos = new List<Vector2>();
 
     private GameState gState;
     [SerializeField] private float timer;
@@ -32,9 +33,10 @@ public class GameManager : MonoBehaviour
 
         charAvailable = new bool[]{ true, true, true, true};
 
-        initPos = new List<Vector2>();
-        foreach (GameObject go in characters)
-            initPos.Add(go.transform.position);
+        initPos.Add(characters[0].transform.position);
+        initPos.Add(characters[2].transform.position);
+        initPos.Add(characters[3].transform.position);
+        initPos.Add(characters[1].transform.position);
 
         timer *= 60;
         timerCoroutine = StartTimer();
@@ -114,7 +116,25 @@ public class GameManager : MonoBehaviour
 
     public void onSettings()
     {
+        Rect auxRect = cameras[0].rect;
+        Vector2 auxVec = initPos[0];
+        int listsSize = cameras.Count;
+        for (int posLists = 0; posLists < listsSize; posLists++)
+        {
+            if (posLists + 1 == listsSize)
+            {
+                cameras[posLists].rect = auxRect;
+                initPos[posLists] = auxVec;
+            }
+            else
+            {
+                cameras[posLists].rect = cameras[posLists + 1].rect;
+                initPos[posLists] = initPos[posLists + 1];
 
+            }
+
+            characters[posLists].transform.parent.position = initPos[posLists];
+        }
     }
 
     public void onCredits()
