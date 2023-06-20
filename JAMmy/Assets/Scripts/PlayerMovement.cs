@@ -18,7 +18,7 @@ public class PlayerMovement : MonoBehaviour
     public float movementSpeed;
     public float orbPickUp;
     private Transform canvaOrb;
-    private int orbCount;
+    [HideInInspector] public int orbCount;
     private Vector2 inputMovement;
     private CharacterState cState;
     private CharacterDirection cDir;
@@ -100,7 +100,7 @@ public class PlayerMovement : MonoBehaviour
             case 0:
                 orbCount++;
                 Destroy(canvaOrb.gameObject);
-                if (orbCount >= 3)
+                if (orbCount >= 3 && Partner.GetComponent<PlayerMovement>().orbCount >= 3)
                     gameMan.WinCond();
                 break;
             case 1:
