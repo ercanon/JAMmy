@@ -199,7 +199,7 @@ public class GameManager : MonoBehaviour
 
                     genNum.Add(orbSelected);
 
-                    Vector3 spawn = maps[list].position + (Vector3)OrbSpawn[orbSelected];
+                    Vector3 spawn = maps[list].position + (3.5f * (Vector3)OrbSpawn[orbSelected]);
 
                     aurora.SetList(Instantiate(orb, spawn, Quaternion.identity));
                 }
