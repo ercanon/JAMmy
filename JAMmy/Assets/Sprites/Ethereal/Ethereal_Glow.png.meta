@@ -47,7 +47,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 32
+  spritePixelsToUnits: 36
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -105,13 +105,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: CharEthereal_Idle_Glow_0
+      name: Ethereal_Glow_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 32
-        height: 32
+        width: 36
+        height: 36
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -119,20 +119,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 68f0875f37f1cbb498f8274b2095a128
-      internalID: -1878428334
+      spriteID: 1eecd7dc7382489498c76dda0b3101fd
+      internalID: 1238572015
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CharEthereal_Idle_Glow_1
+      name: Ethereal_Glow_1
       rect:
         serializedVersion: 2
-        x: 32
+        x: 36
         y: 0
-        width: 32
-        height: 32
+        width: 36
+        height: 36
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -140,20 +140,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f78c49e0e20fd414599c28a53894828f
-      internalID: -353756481
+      spriteID: 56f6cdbc5fe87b94e9544ef4f387ae21
+      internalID: -1694483411
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CharEthereal_Idle_Glow_2
+      name: Ethereal_Glow_2
       rect:
         serializedVersion: 2
-        x: 64
+        x: 72
         y: 0
-        width: 32
-        height: 32
+        width: 36
+        height: 36
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -161,20 +161,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 650f09c459b9bdd4f99fdfed81c5b669
-      internalID: -1887826680
+      spriteID: ea16db64156645f48b6e57e1c0d83255
+      internalID: 1680241163
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CharEthereal_Idle_Glow_3
+      name: Ethereal_Glow_3
       rect:
         serializedVersion: 2
-        x: 96
+        x: 108
         y: 0
-        width: 32
-        height: 32
+        width: 36
+        height: 36
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -182,8 +182,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 896c36fb75f7e2f428623570c3dba762
-      internalID: 1117182993
+      spriteID: 97481d885f46e6f46b1e8e451c5ee189
+      internalID: -1183807825
       vertices: []
       indices: 
       edges: []
@@ -199,10 +199,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      CharEthereal_Idle_Glow_0: -1878428334
-      CharEthereal_Idle_Glow_1: -353756481
-      CharEthereal_Idle_Glow_2: -1887826680
-      CharEthereal_Idle_Glow_3: 1117182993
+      Ethereal_Glow_0: 1238572015
+      Ethereal_Glow_1: -1694483411
+      Ethereal_Glow_2: 1680241163
+      Ethereal_Glow_3: -1183807825
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
