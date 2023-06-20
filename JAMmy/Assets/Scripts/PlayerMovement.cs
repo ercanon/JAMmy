@@ -105,12 +105,15 @@ public class PlayerMovement : MonoBehaviour
                 break;
             case 1:
                 ability1Check = true;
+                Ability1CoolDown = CoolDown(CoolDown1, 1);
                 break;
             case 2:
                 ability2Check = true;
+                Ability2CoolDown = CoolDown(CoolDown2, 2);
                 break;
             case 3:
                 ability3Check = true;
+                Ability3CoolDown = CoolDown(CoolDown3, 3);
                 break;
         }
     }
@@ -147,7 +150,6 @@ public class PlayerMovement : MonoBehaviour
                 ability1Check = false;
                 Ability1.SendMessage("StartAction");
                 StartCoroutine(Ability1CoolDown);
-                print("fuck");
             }
         }
     }

@@ -30,25 +30,29 @@ public class AuroraManager : MonoBehaviour
         {
             if (OA.Key == null)
             {
-                Destroy(OA.Value);
-                orbAurora.Remove(OA.Key);
-                continue;
+                if (OA.Value != null)
+                {
+                    Destroy(OA.Value);
+                    continue;
+                }
             }
-
-            Vector3 targetPosition = cam.WorldToViewportPoint(OA.Key.transform.position);
-            if (OA.Value.activeInHierarchy && targetPosition.x >= 0f && targetPosition.x <= 1f && targetPosition.y >= 0f && targetPosition.y <= 1f)
+            else
             {
-                OA.Value.SetActive(false);
-                continue;
-            }
-            else if (!OA.Value.activeInHierarchy)
+                Vector3 targetPosition = cam.WorldToViewportPoint(OA.Key.transform.position);
+                if (targetPosition.x >= 0f && targetPosition.x <= 1f && targetPosition.y >= 0f && targetPosition.y <= 1f)
+                {
+                    OA.Value.SetActive(false);
+                    continue;
+                }                   
+
+                float angle = Mathf.Atan2(targetPosition.y - 0.5f, targetPosition.x - 0.5f);
+                Vector3 arrowPosition = new Vector3(Mathf.Cos(angle), Mathf.Sin(angle), 1f) * 0.5f;
+
+                OA.Value.transform.position = cam.ViewportToWorldPoint(arrowPosition + new Vector3(0.5f, 0.5f, 0f));
+                OA.Value.transform.rotation = Quaternion.Euler(0f, 0f, (angle + 90) * Mathf.Rad2Deg);
+
                 OA.Value.SetActive(true);
-
-            float angle = Mathf.Atan2(targetPosition.y - 0.5f, targetPosition.x - 0.5f);
-            Vector3 arrowPosition = new Vector3(Mathf.Cos(angle), Mathf.Sin(angle), 1f) * 0.5f;
-
-            OA.Value.transform.position = cam.ViewportToWorldPoint(arrowPosition + new Vector3(0.5f, 0.5f, 0f));
-            OA.Value.transform.rotation = Quaternion.Euler(0f, 0f, (angle + 90) * Mathf.Rad2Deg);
+            }
         }
     }
 
