@@ -4,17 +4,13 @@ using UnityEngine;
 
 public class E_Teleport : MonoBehaviour
 {
-    [SerializeField] private float cooldown;
     [SerializeField] private List<Vector2> corners;
     [SerializeField] private List<Transform> maps;
     private Vector2 centerMap;
-    private float countDown;
-    private IEnumerator coroutine;
 
     void Start()
     {
         centerMap = Vector2.zero;
-        coroutine = CoolDown();
     }
 
     public void StartAction()
@@ -31,24 +27,6 @@ public class E_Teleport : MonoBehaviour
         }
 
         if (centerMap != Vector2.zero)
-            StartCoroutine(coroutine);
-    }
-
-    private IEnumerator CoolDown()
-    {
-        transform.position = (Vector3)(centerMap + corners[Random.Range(0, 3)]);
-        countDown = cooldown;
-
-        while (true)
-        {
-            countDown -= Time.deltaTime;
-            if (countDown <= 0)
-            {
-                StopCoroutine(coroutine);
-                coroutine = CoolDown();
-            }
-
-            yield return null;
-        }
+            transform.position = (Vector3)(centerMap + corners[Random.Range(0, 3)]);
     }
 }

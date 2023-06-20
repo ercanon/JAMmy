@@ -7,55 +7,18 @@ public class C_H_WalkSpeed : MonoBehaviour
     [SerializeField] private PlayerMovement player;
     [SerializeField] private float duration;
     [SerializeField] private float multiplier;
-    [SerializeField] private float cooldown;
-    private float countDown;
-    private IEnumerator coroutine;
-
-    void Start()
-    {
-        coroutine = Duration();
-    }
 
     public void StartAction()
     {
-        StartCoroutine(coroutine);
+        StartCoroutine("Duration");
     }
 
     private IEnumerator Duration()
     {
-        countDown = duration;
         player.movementSpeed *= multiplier;
 
-        while (true)
-        {
-            countDown -= Time.deltaTime;
-            if (countDown <= 0)
-            {
-                player.movementSpeed /= multiplier;
+        yield return new WaitForSeconds(duration);
 
-                StopCoroutine(coroutine);
-                coroutine = CoolDown();
-                StartCoroutine(coroutine);
-            }
-
-            yield return null;
-        }
-    }
-
-    private IEnumerator CoolDown()
-    {
-        countDown = cooldown;
-
-        while (true)
-        {
-            countDown -= Time.deltaTime;
-            if (countDown <= 0)
-            {
-                StopCoroutine(coroutine);
-                coroutine = Duration();
-            }
-
-            yield return null;
-        }
+        player.movementSpeed /= multiplier;
     }
 }

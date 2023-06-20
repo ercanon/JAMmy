@@ -4,55 +4,17 @@ using UnityEngine;
 
 public class K_KnockBack : MonoBehaviour
 {
-    [SerializeField] private PlayerMovement player;
-    [SerializeField] private float duration;
-    [SerializeField] private float multiplier;
-    [SerializeField] private float cooldown;
-    private float countDown;
-    private IEnumerator coroutine;
+    [SerializeField] private float multiplier = 10f;
 
-    void Start()
+    private void OnTriggerStay(Collision2D collision)
     {
-        coroutine = Duration();
-    }
-
-    public void StartAction()
-    {
-        StartCoroutine(coroutine);
-    }
-
-    private IEnumerator Duration()
-    {
-        countDown = duration;
-
-        while (true)
+        if (collision.gameObject.tag == "Player")
         {
-            countDown -= Time.deltaTime;
-            if (countDown <= 0)
-            {
-                StopCoroutine(coroutine);
-                coroutine = CoolDown();
-                StartCoroutine(coroutine);
-            }
+            Vector3 repelDirection = collision.transform.position - transform.position;
+            repelDirection.Normalize();
 
-            yield return null;
-        }
-    }
-
-    private IEnumerator CoolDown()
-    {
-        countDown = cooldown;
-
-        while (true)
-        {
-            countDown -= Time.deltaTime;
-            if (countDown <= 0)
-            {
-                StopCoroutine(coroutine);
-                coroutine = Duration();
-            }
-
-            yield return null;
+            Rigidbody playerRigidbody = collision.gameObject.GetComponent<Rigidbody>();
+            playerRigidbody.AddForce(repelDirection * multiplier, ForceMode.Force);
         }
     }
 }

@@ -29,9 +29,9 @@ public class GameManager : MonoBehaviour
     [SerializeField] private float timer;
     private float countDown;
     private IEnumerator timerCoroutine;
+    [SerializeField] private int quantityOrbs;
     [SerializeField] private GameObject orb;
     [SerializeField] private List<Vector2> OrbSpawn;
-    [SerializeField] private int quantityOrbs;
 
 
 
@@ -134,13 +134,20 @@ public class GameManager : MonoBehaviour
         }
 
         Vector2 auxVec = initPos[0];
+        Transform auxTrans = maps[0];
         int listsSize = characters.Count;
         for (int posLists = 0; posLists < listsSize; posLists++)
         {
             if (posLists + 1 == listsSize)
+            {
                 initPos[posLists] = auxVec;
+                maps[posLists] = auxTrans;
+            }
             else
+            {
                 initPos[posLists] = initPos[posLists + 1];
+                maps[posLists] = maps[posLists + 1];
+            }
 
             characters[posLists].transform.parent.position = initPos[posLists];
         }
@@ -171,7 +178,7 @@ public class GameManager : MonoBehaviour
                     while (index != 0 && genNum[index - 1] == genNum[index])
                         genNum[index] = Random.Range(0, 14);
 
-                    Vector3 spawn = maps[index].position + (Vector3)OrbSpawn[genNum[index]];
+                    Vector3 spawn = maps[list].position + (Vector3)OrbSpawn[genNum[index]];
 
                     aurora.SetList(Instantiate(orb, spawn, Quaternion.identity));
                 }

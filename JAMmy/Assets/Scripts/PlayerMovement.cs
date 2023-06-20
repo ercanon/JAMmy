@@ -15,10 +15,6 @@ public class PlayerMovement : MonoBehaviour
     private SpriteRenderer sprite;
     private GameManager gameMan;
 
-    [SerializeField] private Component Ability1;
-    [SerializeField] private GameObject Ability2;
-    [SerializeField] private GameObject Ability3;
-
     public float movementSpeed;
     private Transform canvaOrb;
     private int orbCount;
@@ -26,6 +22,28 @@ public class PlayerMovement : MonoBehaviour
     private CharacterState cState;
     private CharacterDirection cDir;
     private int charID;
+
+    [Header("Ability1")]
+    [SerializeField] private Component Ability1;
+    [SerializeField] private float CoolDown1;
+    private IEnumerator Ability1CoolDown;
+    private bool ability1Check;
+
+    [Header("Ability2")]
+    [SerializeField] private GameObject Ability2;
+    [SerializeField] private Transform Partner;
+    [SerializeField] private float CoolDown2;
+    private IEnumerator Ability2CoolDown;
+    private bool ability2Check;
+
+    [Header("Ability3")]
+    [SerializeField] private GameObject Ability3;
+    [SerializeField] private Transform Enemy1;
+    [SerializeField] private Transform Enemy2;
+    [SerializeField] private float CoolDown3;
+    private IEnumerator Ability3CoolDown;
+    private bool abilitySelected;
+    private bool ability3Check;
 
 
 
@@ -38,17 +56,14 @@ public class PlayerMovement : MonoBehaviour
         inputs = child.GetComponent<PlayerInput>();
         sprite = child.GetComponent<SpriteRenderer>();
 
+        abilitySelected = false;
+        ability1Check = true;
+        ability2Check = true;
+        ability3Check = true;
+        Ability1CoolDown = CoolDown(CoolDown1, 1);
+        Ability2CoolDown = CoolDown(CoolDown2, 2);
+        Ability3CoolDown = CoolDown(CoolDown3, 3);
         cState = CharacterState.Pause;
-    }
-
-    private void OnEnable()
-    {
-
-    }
-
-    private void OnDisable()
-    {
-
     }
 
     void FixedUpdate()
@@ -73,6 +88,24 @@ public class PlayerMovement : MonoBehaviour
         cState = (CharacterState)state;
         inputs.SwitchCurrentActionMap("Player Controller");
         orbCount = 0;
+    }
+
+    private IEnumerator CoolDown(float duration, int type)
+    {
+        yield return new WaitForSeconds(duration);
+
+        switch (type)
+        {
+            case 1:
+                ability1Check = true;
+                break;
+            case 2:
+                ability2Check = true;
+                break;
+            case 3:
+                ability3Check = true;
+                break;
+        }
     }
 
     /* ----- GAME CONTROLLER ----- */
@@ -102,7 +135,13 @@ public class PlayerMovement : MonoBehaviour
     {
         if (value.started)
         {
-            Ability1.SendMessage("StartAction");
+            if (ability1Check && !abilitySelected)
+            {
+                ability1Check = false;
+                Ability1.SendMessage("StartAction");
+                StartCoroutine(Ability1CoolDown);
+                print("fuck");
+            }
         }
     }
 
@@ -110,7 +149,12 @@ public class PlayerMovement : MonoBehaviour
     {
         if (value.started)
         {
-
+            if (ability2Check && !abilitySelected)
+            {
+                ability2Check = false;
+                Instantiate(Ability2, Partner);
+                StartCoroutine(Ability2CoolDown);
+            }
         }
     }
 
@@ -118,15 +162,8 @@ public class PlayerMovement : MonoBehaviour
     {
         if (value.started)
         {
-
-        }
-    }
-
-    public void OnCancelHability(InputAction.CallbackContext value)
-    {
-        if (value.started)
-        {
-
+            if (ability3Check)
+                abilitySelected = true;
         }
     }
 
@@ -134,7 +171,13 @@ public class PlayerMovement : MonoBehaviour
     {
         if (value.started)
         {
-
+            if (abilitySelected && ability3Check)
+            {
+                ability3Check = false;
+                Instantiate(Ability3, Enemy1);
+                StartCoroutine(Ability3CoolDown);
+                abilitySelected = false;
+            }
         }
     }
 
@@ -142,7 +185,22 @@ public class PlayerMovement : MonoBehaviour
     {
         if (value.started)
         {
+            if (abilitySelected && ability3Check)
+            {
+                ability3Check = false;
+                Instantiate(Ability3, Enemy2);
+                StartCoroutine(Ability3CoolDown);
+                abilitySelected = false;
+            }
+        }
+    }
 
+    public void OnCancelHability(InputAction.CallbackContext value)
+    {
+        if (value.started)
+        {
+            if (abilitySelected)
+                abilitySelected = false;
         }
     }
 

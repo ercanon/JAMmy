@@ -4,55 +4,19 @@ using UnityEngine;
 
 public class E_ReverseControls : MonoBehaviour
 {
-    [SerializeField] private PlayerMovement player;
-    [SerializeField] private float duration;
-    [SerializeField] private float multiplier;
-    [SerializeField] private float cooldown;
-    private float countDown;
-    private IEnumerator coroutine;
-
-    void Start()
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        coroutine = Duration();
-    }
-
-    public void StartAction()
-    {
-        StartCoroutine(coroutine);
-    }
-
-    private IEnumerator Duration()
-    {
-        countDown = duration;
-
-        while (true)
+        if (collision.gameObject.tag == "Player")
         {
-            countDown -= Time.deltaTime;
-            if (countDown <= 0)
-            {
-                StopCoroutine(coroutine);
-                coroutine = CoolDown();
-                StartCoroutine(coroutine);
-            }
-
-            yield return null;
+            collision.gameObject.GetComponent<PlayerMovement>().movementSpeed *= -1;
         }
     }
 
-    private IEnumerator CoolDown()
+    private void OnCollisionExit2D(Collision2D collision)
     {
-        countDown = cooldown;
-
-        while (true)
+        if (collision.gameObject.tag == "Player")
         {
-            countDown -= Time.deltaTime;
-            if (countDown <= 0)
-            {
-                StopCoroutine(coroutine);
-                coroutine = Duration();
-            }
-
-            yield return null;
+            collision.gameObject.GetComponent<PlayerMovement>().movementSpeed *= -1;
         }
     }
 }

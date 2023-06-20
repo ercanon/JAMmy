@@ -8,6 +8,7 @@ TagManager:
   - Orb
   - Sync
   - Beacon
+  - Ability
   layers:
   - Default
   - TransparentFX
