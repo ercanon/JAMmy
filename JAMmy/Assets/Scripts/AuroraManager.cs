@@ -7,12 +7,17 @@ public class AuroraManager : MonoBehaviour
 {
     /* ----- VARIABLES ----- */
     private Camera cam;
+    [SerializeField] private Animator anim;
+    public Vector2 guideCamera;
 
-    [SerializeField] private int auroraQuantity;
     [SerializeField] private GameObject auroraPrefab;
+    [SerializeField] private int auroraQuantity;
     private Transform[] auroraList;
     [HideInInspector] public List<GameObject> orbTrans;
 
+
+
+    /* ----- GAME FRAMING ----- */
     void Start()
     {
         cam = GetComponent<Camera>();
@@ -40,7 +45,6 @@ public class AuroraManager : MonoBehaviour
                 }
 
                 Vector3 targetPosition = cam.WorldToViewportPoint(orbTrans[list].transform.position);
-
                 if (targetPosition.x >= 0f && targetPosition.x <= 1f && targetPosition.y >= 0f && targetPosition.y <= 1f)
                 {
                     auroraList[list].gameObject.SetActive(false);
@@ -63,5 +67,20 @@ public class AuroraManager : MonoBehaviour
         foreach (GameObject orb in orbTrans)
             if (orb != null) Destroy(orb);
         orbTrans.Clear();
+    }
+
+    public void RotateScreens(int state)
+    {
+        anim.SetInteger("GameState", state);
+        StartCoroutine("UpdateCamera");
+    }
+
+    private IEnumerator UpdateCamera()
+    {
+        while (true)
+        {
+            cam.rect = new Rect(guideCamera, new Vector2(0.5f, 0.5f));
+            yield return null;
+        }
     }
 }

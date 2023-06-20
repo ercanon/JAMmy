@@ -1172,8 +1172,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e80509d6f6248f43a66533ad4324b3c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  auroraQuantity: 3
+  anim: {fileID: 1930356098}
+  guideCamera: {x: 0, y: 0}
   auroraPrefab: {fileID: 8851505293608062662, guid: 8037a6488a3f28a4fba2339a38a6b7b9, type: 3}
+  auroraQuantity: 3
   orbTrans: []
 --- !u!1 &615402822
 GameObject:
@@ -2790,8 +2792,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e80509d6f6248f43a66533ad4324b3c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  auroraQuantity: 3
+  anim: {fileID: 1930356098}
+  guideCamera: {x: 0, y: 0}
   auroraPrefab: {fileID: 8851505293608062662, guid: 8037a6488a3f28a4fba2339a38a6b7b9, type: 3}
+  auroraQuantity: 3
   orbTrans: []
 --- !u!1 &1217816490
 GameObject:
@@ -3804,8 +3808,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   render: {fileID: 1211401566}
   characters:
-  - {fileID: 783079956}
   - {fileID: 1929018019}
+  - {fileID: 783079956}
   - {fileID: 2018085658}
   - {fileID: 202448294}
   cameraList:
@@ -4202,8 +4206,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e80509d6f6248f43a66533ad4324b3c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  auroraQuantity: 3
+  anim: {fileID: 1930356098}
+  guideCamera: {x: 0, y: 0}
   auroraPrefab: {fileID: 8851505293608062662, guid: 8037a6488a3f28a4fba2339a38a6b7b9, type: 3}
+  auroraQuantity: 3
   orbTrans: []
 --- !u!1 &1774248345
 GameObject:
@@ -5317,6 +5323,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e80509d6f6248f43a66533ad4324b3c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  auroraQuantity: 3
+  anim: {fileID: 1930356098}
+  guideCamera: {x: 0, y: 0}
   auroraPrefab: {fileID: 8851505293608062662, guid: 8037a6488a3f28a4fba2339a38a6b7b9, type: 3}
+  auroraQuantity: 3
   orbTrans: []

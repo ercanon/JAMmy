@@ -9,7 +9,7 @@ using TMPro;
 
 public class GameManager : MonoBehaviour
 {
-    enum GameState { MenuScreen, GamePlayScreen, EndScreen, Transition };
+    enum GameState { MenuScreen, Round1, Round2, Round3, Round4, EndScreen };
 
     /* ----- VARIABLES ----- */
     [Header("General")]
@@ -119,7 +119,10 @@ public class GameManager : MonoBehaviour
     public void WinCond()
     {
         foreach (Camera cam in cameraList)
+        {
             cam.GetComponent<AuroraManager>().ClearList();
+            cam.GetComponent<AuroraManager>().RotateScreens((int)gState);
+        }
 
         StopCoroutine(timerCoroutine);
         countDown = timer * 60;
@@ -128,21 +131,14 @@ public class GameManager : MonoBehaviour
             if (player.activeInHierarchy)
                 player.GetComponentInParent<PlayerMovement>().SetCharacter(1);
 
-        Rect auxRect = cameraList[0].rect;
         Vector2 auxVec = initPos[0];
         int listsSize = cameraList.Count;
         for (int posLists = 0; posLists < listsSize; posLists++)
         {
             if (posLists + 1 == listsSize)
-            {
-                cameraList[posLists].rect = auxRect;
                 initPos[posLists] = auxVec;
-            }
             else
-            {
-                cameraList[posLists].rect = cameraList[posLists + 1].rect;
                 initPos[posLists] = initPos[posLists + 1];
-            }
 
             characters[posLists].transform.parent.position = initPos[posLists];
         }
@@ -155,7 +151,8 @@ public class GameManager : MonoBehaviour
     /* ----- MENU BUTTONS ----- */
     public void onPlay()
     {
-        gState = GameState.GamePlayScreen;
+        if (gState++ > GameState.EndScreen) 
+            ;
 
         timerCoroutine = StartTimer();
         StartCoroutine(timerCoroutine);

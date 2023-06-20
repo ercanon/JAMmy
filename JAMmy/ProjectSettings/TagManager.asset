@@ -48,7 +48,7 @@ TagManager:
   - name: BackGround
     uniqueID: 181423837
     locked: 0
-  - name: Habilities
+  - name: AbilitiesBack
     uniqueID: 2242697583
     locked: 0
   - name: Orbs
@@ -56,6 +56,9 @@ TagManager:
     locked: 0
   - name: Player
     uniqueID: 1235805811
+    locked: 0
+  - name: AbilitiesFront
+    uniqueID: 3934227331
     locked: 0
   - name: Camera
     uniqueID: 1075271959
