@@ -796,7 +796,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movementSpeed: 3
-  orbPickUp: 0
+  orbPickUp: 3
   Ability1: {fileID: 277554130}
   CoolDown1: 0
   Ability2: {fileID: 6607117097996693499, guid: 984d33db72e45a946b72ed45476438a6, type: 3}
@@ -1192,7 +1192,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movementSpeed: 3
-  orbPickUp: 0
+  orbPickUp: 3
   Ability1: {fileID: 474933788}
   CoolDown1: 0
   Ability2: {fileID: 1069647291993804752, guid: ecb9f8d644012224ea3d11c64c9feca5, type: 3}
@@ -4083,7 +4083,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movementSpeed: 3
-  orbPickUp: 0
+  orbPickUp: 3
   Ability1: {fileID: 1357587515}
   CoolDown1: 3
   Ability2: {fileID: 6835667261634698424, guid: 3881854ac4b2df340bf0b251be2f32cf, type: 3}
@@ -4672,7 +4672,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movementSpeed: 3
-  orbPickUp: 0
+  orbPickUp: 3
   Ability1: {fileID: 1672062211}
   CoolDown1: 10
   Ability2: {fileID: 7058378545077046719, guid: 5547d8ef824abfe4396c00e59b765a77, type: 3}
