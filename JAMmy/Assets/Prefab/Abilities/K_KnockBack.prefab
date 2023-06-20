@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 2269399104052122283}
   m_Layer: 0
   m_Name: K_KnockBack
-  m_TagString: Ability
+  m_TagString: AbilityEnemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -46,10 +46,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd37a018df01fb644970579f923a7830, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
-  duration: 0
   multiplier: 0
-  cooldown: 0
+  durationOn: 0
+  durationOff: 0
 --- !u!212 &6667731299276641734
 SpriteRenderer:
   m_ObjectHideFlags: 0

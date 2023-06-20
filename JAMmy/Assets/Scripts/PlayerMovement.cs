@@ -104,8 +104,8 @@ public class PlayerMovement : MonoBehaviour
                 yield return null;
 
                 if (GetComponentInChildren<AuroraManager>().orbAurora.Count <= 0 &&
-                    Partner.GetComponentInChildren<AuroraManager>().orbAurora.Count <= 0) ;
-                    //gameMan.WinCond();
+                    Partner.GetComponentInChildren<AuroraManager>().orbAurora.Count <= 0)
+                    gameMan.WinCond((int)Mathf.Sign(transform.position.x));
                 break;
             case 1:
                 ability1Check = true;

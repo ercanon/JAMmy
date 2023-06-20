@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 5428374911702585999}
   m_Layer: 0
   m_Name: H_Anchor
-  m_TagString: Ability
+  m_TagString: AbilityEnemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -46,10 +46,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6f92c19c5de76a489b7a69a8e2fcf7d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
   duration: 0
-  multiplier: 0
-  cooldown: 0
 --- !u!212 &622475333959046626
 SpriteRenderer:
   m_ObjectHideFlags: 0

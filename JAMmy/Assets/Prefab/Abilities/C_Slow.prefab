@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 5879230604376063672}
   m_Layer: 0
   m_Name: C_Slow
-  m_TagString: Ability
+  m_TagString: AbilityEnemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -46,10 +46,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d21ad09f1a36b4d4e8409eeebbf0a7dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
-  duration: 0
   multiplier: 0
-  cooldown: 0
 --- !u!212 &1324398219052857813
 SpriteRenderer:
   m_ObjectHideFlags: 0

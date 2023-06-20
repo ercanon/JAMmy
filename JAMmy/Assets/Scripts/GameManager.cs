@@ -19,7 +19,6 @@ public class GameManager : MonoBehaviour
     private bool[] charAvailable;
     private List<Vector2> initPos;
     private GameState gState;
-    private GameObject endScreen;
     private int[] teamCount;
 
     [Space]
@@ -38,6 +37,15 @@ public class GameManager : MonoBehaviour
 
 
     /* ----- GAME FRAMING ----- */
+    public void RestartGame()
+    {
+        foreach (GameObject pending in GameObject.FindGameObjectsWithTag("Ability"))
+            Destroy(pending);
+
+        foreach (GameObject pending in GameObject.FindGameObjectsWithTag("AbilityEnemy"))
+            Destroy(pending);
+    }
+
     void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;
@@ -49,17 +57,11 @@ public class GameManager : MonoBehaviour
         foreach (GameObject player in characters)
             initPos.Add(player.transform.position);
 
-        endScreen = transform.GetChild(2).gameObject;
-        teamCount = new int[2];
+        teamCount = new int[] { 0, 0};
 
         startCond.interactable = false;
 
         countDown = timer * 60;
-    }
-
-    void Update()
-    {
-
     }
 
     private IEnumerator StartTimer()
@@ -75,7 +77,7 @@ public class GameManager : MonoBehaviour
             if (countDown <= 0)
             {
                 StopCoroutine(timerCoroutine);
-                WinCond(-1);
+                WinCond(0);
             }
 
             yield return null;
@@ -125,6 +127,9 @@ public class GameManager : MonoBehaviour
 
     public void WinCond(int posWinner)
     {
+        if (posWinner != 0)
+            teamCount[posWinner <= -1 ? 0 : 1]++;
+
         StopAllCoroutines();
         countDown = timer * 60;
 
@@ -157,6 +162,18 @@ public class GameManager : MonoBehaviour
             characters[posLists].transform.parent.position = initPos[posLists];
         }
 
+        if (gState++ > GameState.EndScreen)
+        {
+            transform.GetChild(1).gameObject.SetActive(false);
+            Transform aux = transform.GetChild(2);
+            aux.gameObject.SetActive(true);
+            if (teamCount[0] == teamCount[1])     aux.GetChild(0).gameObject.SetActive(true);
+            else if (teamCount[0] > teamCount[1]) aux.GetChild(1).gameObject.SetActive(true);
+            else if (teamCount[0] < teamCount[1]) aux.GetChild(2).gameObject.SetActive(true);
+
+            return;
+        }
+
         onPlay();
     }
 
@@ -165,12 +182,6 @@ public class GameManager : MonoBehaviour
     /* ----- MENU BUTTONS ----- */
     public void onPlay()
     {
-        if (gState++ > GameState.EndScreen)
-        {
-
-            return;
-        }
-
         timerCoroutine = StartTimer();
         StartCoroutine(timerCoroutine);
 
