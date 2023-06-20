@@ -174,9 +174,9 @@ public class GameManager : MonoBehaviour
                 AuroraManager aurora = characters[list].transform.parent.GetComponentInChildren<AuroraManager>();
                 for (int index = 0; index < quantityOrbs; index++)
                 {
-                    genNum[index] = Random.Range(0, 14);
+                    genNum[index] = Random.Range(0, OrbSpawn.Count-1);
                     while (index != 0 && genNum[index - 1] == genNum[index])
-                        genNum[index] = Random.Range(0, 14);
+                        genNum[index] = Random.Range(0, OrbSpawn.Count - 1);
 
                     Vector3 spawn = maps[list].position + (Vector3)OrbSpawn[genNum[index]];
 

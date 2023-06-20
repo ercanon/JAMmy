@@ -150,6 +150,7 @@ public class PlayerMovement : MonoBehaviour
                 ability1Check = false;
                 Ability1.SendMessage("StartAction");
                 StartCoroutine(Ability1CoolDown);
+                Debug.Log("Ability1");
             }
         }
     }
@@ -161,8 +162,9 @@ public class PlayerMovement : MonoBehaviour
             if (ability2Check && !abilitySelected)
             {
                 ability2Check = false;
-                Instantiate(Ability2, Partner);
+                Instantiate(Ability2, Partner.position, Quaternion.identity);
                 StartCoroutine(Ability2CoolDown);
+                Debug.Log("Ability2");
             }
         }
     }
@@ -173,6 +175,7 @@ public class PlayerMovement : MonoBehaviour
         {
             if (ability3Check)
                 abilitySelected = true;
+            Debug.Log("Ability3");
         }
     }
 
@@ -183,9 +186,10 @@ public class PlayerMovement : MonoBehaviour
             if (abilitySelected && ability3Check)
             {
                 ability3Check = false;
-                Instantiate(Ability3, Enemy1);
+                Instantiate(Ability3, Enemy1.position, Quaternion.identity);
                 StartCoroutine(Ability3CoolDown);
                 abilitySelected = false;
+                Debug.Log("Enemy1");
             }
         }
     }
@@ -197,9 +201,10 @@ public class PlayerMovement : MonoBehaviour
             if (abilitySelected && ability3Check)
             {
                 ability3Check = false;
-                Instantiate(Ability3, Enemy2);
+                Instantiate(Ability3, Enemy2.position, Quaternion.identity);
                 StartCoroutine(Ability3CoolDown);
                 abilitySelected = false;
+                Debug.Log("Enemy2");
             }
         }
     }
@@ -210,6 +215,7 @@ public class PlayerMovement : MonoBehaviour
         {
             if (abilitySelected)
                 abilitySelected = false;
+            Debug.Log("CancelAbility");
         }
     }
 
