@@ -170,15 +170,17 @@ public class GameManager : MonoBehaviour
         {
             if (characters[list].activeInHierarchy)
             {
-                int[] genNum = new int[quantityOrbs];
+                List<int> genNum = new List<int>();
                 AuroraManager aurora = characters[list].transform.parent.GetComponentInChildren<AuroraManager>();
-                for (int index = 0; index < quantityOrbs; index++)
+                foreach (var spawnPos in genNum)
                 {
-                    genNum[index] = Random.Range(0, OrbSpawn.Count-1);
-                    while (index != 0 && genNum[index - 1] == genNum[index])
-                        genNum[index] = Random.Range(0, OrbSpawn.Count - 1);
+                    int orbSelected = Random.Range(0, OrbSpawn.Count - 1);
+                    while (genNum.Contains(orbSelected))
+                        orbSelected = Random.Range(0, OrbSpawn.Count - 1);
 
-                    Vector3 spawn = maps[list].position + (Vector3)OrbSpawn[genNum[index]];
+                    genNum.Add(orbSelected);
+
+                    Vector3 spawn = maps[list].position + (Vector3)OrbSpawn[orbSelected];
 
                     aurora.SetList(Instantiate(orb, spawn, Quaternion.identity));
                 }
