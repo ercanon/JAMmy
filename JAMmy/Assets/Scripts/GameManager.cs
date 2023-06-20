@@ -15,7 +15,7 @@ public class GameManager : MonoBehaviour
     [Header("General")]
     [SerializeField] private TextMeshProUGUI render;
     [SerializeField] private List<GameObject> characters;
-    [SerializeField] private List<Camera> cameraList;
+    [SerializeField] private List<Transform> maps;
     private bool[] charAvailable;
     private List<Vector2> initPos = new List<Vector2>();
     private GameState gState;
@@ -29,8 +29,9 @@ public class GameManager : MonoBehaviour
     [SerializeField] private float timer;
     private float countDown;
     private IEnumerator timerCoroutine;
-    [SerializeField] private GameObject Orb;
+    [SerializeField] private GameObject orb;
     [SerializeField] private List<Vector2> OrbSpawn;
+    [SerializeField] private int quantityOrbs;
 
 
 
@@ -42,10 +43,8 @@ public class GameManager : MonoBehaviour
 
         charAvailable = new bool[]{ true, true, true, true};
 
-        initPos.Add(characters[0].transform.position);
-        initPos.Add(characters[2].transform.position);
-        initPos.Add(characters[3].transform.position);
-        initPos.Add(characters[1].transform.position);
+        foreach (GameObject player in characters)
+            initPos.Add(player.transform.position);
 
         startCond.interactable = false;
 
@@ -68,7 +67,10 @@ public class GameManager : MonoBehaviour
             render.text = string.Format("{0:0}:{1:00}", min, sec);
 
             if (countDown <= 0)
+            {
                 StopCoroutine(timerCoroutine);
+                WinCond();
+            }
 
             yield return null;
         }
@@ -118,21 +120,21 @@ public class GameManager : MonoBehaviour
 
     public void WinCond()
     {
-        foreach (Camera cam in cameraList)
-        {
-            cam.GetComponent<AuroraManager>().ClearList();
-            cam.GetComponent<AuroraManager>().RotateScreens((int)gState);
-        }
-
         StopCoroutine(timerCoroutine);
         countDown = timer * 60;
 
         foreach (GameObject player in characters)
+        {
             if (player.activeInHierarchy)
                 player.GetComponentInParent<PlayerMovement>().SetCharacter(1);
 
+            AuroraManager aurora = player.transform.parent.GetComponentInChildren<AuroraManager>();
+            aurora.ClearList();
+            aurora.RotateScreens((int)gState);
+        }
+
         Vector2 auxVec = initPos[0];
-        int listsSize = cameraList.Count;
+        int listsSize = characters.Count;
         for (int posLists = 0; posLists < listsSize; posLists++)
         {
             if (posLists + 1 == listsSize)
@@ -161,18 +163,17 @@ public class GameManager : MonoBehaviour
         {
             if (characters[list].activeInHierarchy)
             {
-                AuroraManager orbList = cameraList[list].GetComponent<AuroraManager>();
-
-                int[] genNum = { Random.Range(0, 14), Random.Range(0, 14), Random.Range(0, 14) };
-                for (int index = 0; index < genNum.Length; index++)
+                int[] genNum = new int[quantityOrbs];
+                AuroraManager aurora = characters[list].transform.parent.GetComponentInChildren<AuroraManager>();
+                for (int index = 0; index < quantityOrbs; index++)
                 {
-                    while (genNum[0] == genNum[index] && index != 0)
+                    genNum[index] = Random.Range(0, 14);
+                    while (index != 0 && genNum[index - 1] == genNum[index])
                         genNum[index] = Random.Range(0, 14);
 
-                    Vector3 spawn = characters[list].transform.position;
-                    spawn += (Vector3)OrbSpawn[genNum[index]];
+                    Vector3 spawn = maps[index].position + (Vector3)OrbSpawn[genNum[index]];
 
-                    orbList.orbTrans.Add(Instantiate(Orb, spawn, Quaternion.identity));
+                    aurora.SetList(Instantiate(orb, spawn, Quaternion.identity));
                 }
 
                 characters[list].GetComponentInParent<PlayerMovement>().SetCharacter(1);

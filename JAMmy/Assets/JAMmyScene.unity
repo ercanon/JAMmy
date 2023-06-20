@@ -743,7 +743,7 @@ Transform:
   - {fileID: 2018085659}
   - {fileID: 2084797325}
   m_Father: {fileID: 1930356097}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &277554126
 Rigidbody2D:
@@ -979,7 +979,7 @@ Transform:
   - {fileID: 202448295}
   - {fileID: 1724319190}
   m_Father: {fileID: 1930356097}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &474933784
 Rigidbody2D:
@@ -2076,7 +2076,7 @@ Transform:
   m_Children:
   - {fileID: 615402823}
   m_Father: {fileID: 1288719178}
-  m_RootOrder: 1
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1000242962
 SpriteRenderer:
@@ -3131,9 +3131,9 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1418551293}
-  - {fileID: 1000242961}
   - {fileID: 1407976368}
   - {fileID: 1924870315}
+  - {fileID: 1000242961}
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3307,7 +3307,7 @@ Transform:
   - {fileID: 783079957}
   - {fileID: 1214108054}
   m_Father: {fileID: 1930356097}
-  m_RootOrder: 1
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &1357587511
 Rigidbody2D:
@@ -3551,7 +3551,7 @@ Transform:
   m_Children:
   - {fileID: 385902478}
   m_Father: {fileID: 1288719178}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1407976369
 SpriteRenderer:
@@ -3809,14 +3809,9 @@ MonoBehaviour:
   render: {fileID: 1211401566}
   characters:
   - {fileID: 1929018019}
-  - {fileID: 783079956}
   - {fileID: 2018085658}
   - {fileID: 202448294}
-  cameraList:
-  - {fileID: 519420031}
-  - {fileID: 2084797324}
-  - {fileID: 1724319189}
-  - {fileID: 1214108053}
+  - {fileID: 783079956}
   startCond: {fileID: 1064143081}
   timer: 3
   Orb: {fileID: 7849104267920188932, guid: 3a2775b140aca914d978c3c1ab33e8b4, type: 3}
@@ -3836,6 +3831,11 @@ MonoBehaviour:
   - {x: 0, y: 10}
   - {x: -10, y: 0}
   - {x: 0, y: -5}
+  Maps:
+  - {fileID: 1418551293}
+  - {fileID: 1407976368}
+  - {fileID: 1924870315}
+  - {fileID: 1000242961}
 --- !u!81 &1624260463
 AudioListener:
   m_ObjectHideFlags: 0
@@ -4392,7 +4392,7 @@ Transform:
   m_Children:
   - {fileID: 1774248346}
   m_Father: {fileID: 1288719178}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1924870316
 SpriteRenderer:
@@ -4825,9 +4825,9 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1672062206}
-  - {fileID: 1357587509}
   - {fileID: 277554124}
   - {fileID: 474933782}
+  - {fileID: 1357587509}
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

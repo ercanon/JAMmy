@@ -8,12 +8,11 @@ public class AuroraManager : MonoBehaviour
     /* ----- VARIABLES ----- */
     private Camera cam;
     [SerializeField] private Animator anim;
-    public Vector2 guideCamera;
+    [HideInInspector] public Vector2 guideCamera;
+    private float timer;
 
     [SerializeField] private GameObject auroraPrefab;
-    [SerializeField] private int auroraQuantity;
-    private Transform[] auroraList;
-    [HideInInspector] public List<GameObject> orbTrans;
+    private Dictionary<GameObject, GameObject> orbAurora;
 
 
 
@@ -22,51 +21,53 @@ public class AuroraManager : MonoBehaviour
     {
         cam = GetComponent<Camera>();
 
-        auroraList = new Transform[auroraQuantity];
-        for (int i = 0; i < auroraQuantity; i++)
-        {
-            auroraList[i] = Instantiate(auroraPrefab, this.transform).transform;
-            auroraList[i].gameObject.SetActive(false);
-        }
-
-        orbTrans = new List<GameObject>();
+        orbAurora = new Dictionary<GameObject, GameObject>();
     }
 
     void Update()
     {
-        if (orbTrans.Count > 0)
+        foreach (var OA in orbAurora)
         {
-            for (int list = 0; list < auroraQuantity; list++)
+            if (OA.Key == null)
             {
-                if (orbTrans[list] == null)
-                {
-                    auroraList[list].gameObject.SetActive(false);
-                    return;
-                }
-
-                Vector3 targetPosition = cam.WorldToViewportPoint(orbTrans[list].transform.position);
-                if (targetPosition.x >= 0f && targetPosition.x <= 1f && targetPosition.y >= 0f && targetPosition.y <= 1f)
-                {
-                    auroraList[list].gameObject.SetActive(false);
-                    return;
-                }
-
-                float angle = Mathf.Atan2(targetPosition.y - 0.5f, targetPosition.x - 0.5f);
-                Vector3 arrowPosition = new Vector3(Mathf.Cos(angle), Mathf.Sin(angle), 1f) * 0.5f;
-
-                auroraList[list].transform.position = cam.ViewportToWorldPoint(arrowPosition + new Vector3(0.5f, 0.5f, 0f));
-                auroraList[list].transform.rotation = Quaternion.Euler(0f, 0f, (angle + 90) * Mathf.Rad2Deg);
-
-                auroraList[list].gameObject.SetActive(true);
+                Destroy(OA.Value);
+                orbAurora.Remove(OA.Key);
+                continue;
             }
+
+            Vector3 targetPosition = cam.WorldToViewportPoint(OA.Key.transform.position);
+            if (OA.Value.activeInHierarchy && targetPosition.x >= 0f && targetPosition.x <= 1f && targetPosition.y >= 0f && targetPosition.y <= 1f)
+            {
+                OA.Value.SetActive(false);
+                continue;
+            }
+            else if (!OA.Value.activeInHierarchy)
+                OA.Value.SetActive(true);
+
+            float angle = Mathf.Atan2(targetPosition.y - 0.5f, targetPosition.x - 0.5f);
+            Vector3 arrowPosition = new Vector3(Mathf.Cos(angle), Mathf.Sin(angle), 1f) * 0.5f;
+
+            OA.Value.transform.position = cam.ViewportToWorldPoint(arrowPosition + new Vector3(0.5f, 0.5f, 0f));
+            OA.Value.transform.rotation = Quaternion.Euler(0f, 0f, (angle + 90) * Mathf.Rad2Deg);
         }
+    }
+
+    public void SetList(GameObject orb)
+    {
+        orbAurora.Add(orb, Instantiate(auroraPrefab, this.transform));
     }
 
     public void ClearList()
     {
-        foreach (GameObject orb in orbTrans)
-            if (orb != null) Destroy(orb);
-        orbTrans.Clear();
+        foreach (var orb in orbAurora)
+        {
+            if (orb.Key != null)
+            {
+                Destroy(orb.Key);
+                Destroy(orb.Value);
+            }
+        }
+        orbAurora.Clear();
     }
 
     public void RotateScreens(int state)
@@ -77,9 +78,16 @@ public class AuroraManager : MonoBehaviour
 
     private IEnumerator UpdateCamera()
     {
+        timer = 1.25f;
+
         while (true)
         {
             cam.rect = new Rect(guideCamera, new Vector2(0.5f, 0.5f));
+
+            timer -= Time.deltaTime;
+            if (timer <= 0)
+                StopCoroutine("UpdateCamera");
+
             yield return null;
         }
     }
