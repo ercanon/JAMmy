@@ -6,15 +6,14 @@ public class K_KnockBack : MonoBehaviour
 {
     [SerializeField] private float multiplier = 10f;
 
-    private void OnTriggerStay(Collision2D collision)
+    private void OnTriggerStay2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Player")
         {
             Vector3 repelDirection = collision.transform.position - transform.position;
             repelDirection.Normalize();
 
-            Rigidbody playerRigidbody = collision.gameObject.GetComponent<Rigidbody>();
-            playerRigidbody.AddForce(repelDirection * multiplier, ForceMode.Force);
+            collision.gameObject.GetComponent<Rigidbody2D>().AddForce(repelDirection * multiplier, ForceMode2D.Force);
         }
     }
 }
