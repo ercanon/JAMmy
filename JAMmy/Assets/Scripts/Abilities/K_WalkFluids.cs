@@ -6,6 +6,11 @@ public class K_WalkFluids : MonoBehaviour
 {
     [SerializeField] private float duration;
 
+    public void ResetAction()
+    {
+        StopAllCoroutines();
+    }
+    
     public void StartAction()
     {
         StartCoroutine("Duration");

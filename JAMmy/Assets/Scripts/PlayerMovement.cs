@@ -18,7 +18,6 @@ public class PlayerMovement : MonoBehaviour
     public float movementSpeed;
     public float orbPickUp;
     private Transform canvaOrb;
-    [HideInInspector] public int orbCount;
     private Vector2 inputMovement;
     private CharacterState cState;
     private CharacterDirection cDir;
@@ -57,13 +56,6 @@ public class PlayerMovement : MonoBehaviour
         inputs = child.GetComponent<PlayerInput>();
         sprite = child.GetComponent<SpriteRenderer>();
 
-        abilitySelected = false;
-        ability1Check = true;
-        ability2Check = true;
-        ability3Check = true;
-        Ability1CoolDown = CoolDown(CoolDown1, 1);
-        Ability2CoolDown = CoolDown(CoolDown2, 2);
-        Ability3CoolDown = CoolDown(CoolDown3, 3);
         cState = CharacterState.Pause;
     }
 
@@ -86,9 +78,18 @@ public class PlayerMovement : MonoBehaviour
 
     public void SetCharacter(int state)
     {
+        StopAllCoroutines();
+        abilitySelected = false;
+        ability1Check = true;
+        ability2Check = true;
+        ability3Check = true;
+        Ability1CoolDown = CoolDown(CoolDown1, 1);
+        Ability2CoolDown = CoolDown(CoolDown2, 2);
+        Ability3CoolDown = CoolDown(CoolDown3, 3);
+        Ability1.SendMessage("ResetAction");
+
         cState = (CharacterState)state;
         inputs.SwitchCurrentActionMap("Player Controller");
-        orbCount = 0;
     }
 
     private IEnumerator CoolDown(float duration, int type)
@@ -98,10 +99,13 @@ public class PlayerMovement : MonoBehaviour
         switch (type)
         {
             case 0:
-                orbCount++;
                 Destroy(canvaOrb.gameObject);
-                if (orbCount >= 3 && Partner.GetComponent<PlayerMovement>().orbCount >= 3)
-                    gameMan.WinCond();
+
+                yield return null;
+
+                if (GetComponentInChildren<AuroraManager>().orbAurora.Count <= 0 &&
+                    Partner.GetComponentInChildren<AuroraManager>().orbAurora.Count <= 0) ;
+                    //gameMan.WinCond();
                 break;
             case 1:
                 ability1Check = true;

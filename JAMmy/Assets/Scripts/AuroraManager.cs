@@ -12,7 +12,8 @@ public class AuroraManager : MonoBehaviour
     private float timer;
 
     [SerializeField] private GameObject auroraPrefab;
-    private Dictionary<GameObject, GameObject> orbAurora;
+    [HideInInspector] public Dictionary<GameObject, GameObject> orbAurora;
+    List<GameObject> dictClean;
 
 
 
@@ -22,6 +23,7 @@ public class AuroraManager : MonoBehaviour
         cam = GetComponent<Camera>();
 
         orbAurora = new Dictionary<GameObject, GameObject>();
+        dictClean = new List<GameObject>();
     }
 
     void Update()
@@ -33,6 +35,7 @@ public class AuroraManager : MonoBehaviour
                 if (OA.Value != null)
                 {
                     Destroy(OA.Value);
+                    dictClean.Add(OA.Key);
                     continue;
                 }
             }
@@ -43,7 +46,7 @@ public class AuroraManager : MonoBehaviour
                 {
                     OA.Value.SetActive(false);
                     continue;
-                }                   
+                }
 
                 float angle = Mathf.Atan2(targetPosition.y - 0.5f, targetPosition.x - 0.5f);
                 Vector3 arrowPosition = new Vector3(Mathf.Cos(angle), Mathf.Sin(angle), 1f) * 0.5f;
@@ -53,6 +56,11 @@ public class AuroraManager : MonoBehaviour
 
                 OA.Value.SetActive(true);
             }
+        }
+
+        foreach (var key in dictClean)
+        {
+            orbAurora.Remove(key);
         }
     }
 

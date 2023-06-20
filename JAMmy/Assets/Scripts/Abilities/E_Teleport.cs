@@ -8,13 +8,14 @@ public class E_Teleport : MonoBehaviour
     [SerializeField] private List<Transform> maps;
     private Vector2 centerMap;
 
-    void Start()
+    void ResetAction()
     {
-        centerMap = Vector2.zero;
+        
     }
 
     public void StartAction()
     {
+        centerMap = Vector2.zero;
         Vector2 playerPos = (Vector2) transform.position;
         foreach (Transform mapPos in maps)
         {

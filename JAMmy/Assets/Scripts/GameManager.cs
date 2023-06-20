@@ -17,8 +17,10 @@ public class GameManager : MonoBehaviour
     [SerializeField] private List<GameObject> characters;
     [SerializeField] private List<Transform> maps;
     private bool[] charAvailable;
-    private List<Vector2> initPos = new List<Vector2>();
+    private List<Vector2> initPos;
     private GameState gState;
+    private GameObject endScreen;
+    private int[] teamCount;
 
     [Space]
     [Header("Menus")]
@@ -43,8 +45,12 @@ public class GameManager : MonoBehaviour
 
         charAvailable = new bool[]{ true, true, true, true};
 
+        initPos = new List<Vector2>();
         foreach (GameObject player in characters)
             initPos.Add(player.transform.position);
+
+        endScreen = transform.GetChild(2).gameObject;
+        teamCount = new int[2];
 
         startCond.interactable = false;
 
@@ -69,7 +75,7 @@ public class GameManager : MonoBehaviour
             if (countDown <= 0)
             {
                 StopCoroutine(timerCoroutine);
-                WinCond();
+                WinCond(-1);
             }
 
             yield return null;
@@ -97,7 +103,6 @@ public class GameManager : MonoBehaviour
 
                     if (input.actions != null)
                         charAvailable[pos] = false;
-
                     break;
                 }
             }
@@ -118,9 +123,9 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public void WinCond()
+    public void WinCond(int posWinner)
     {
-        StopCoroutine(timerCoroutine);
+        StopAllCoroutines();
         countDown = timer * 60;
 
         foreach (GameObject player in characters)
@@ -160,8 +165,11 @@ public class GameManager : MonoBehaviour
     /* ----- MENU BUTTONS ----- */
     public void onPlay()
     {
-        if (gState++ > GameState.EndScreen) 
-            ;
+        if (gState++ > GameState.EndScreen)
+        {
+
+            return;
+        }
 
         timerCoroutine = StartTimer();
         StartCoroutine(timerCoroutine);
@@ -172,7 +180,7 @@ public class GameManager : MonoBehaviour
             {
                 List<int> genNum = new List<int>();
                 AuroraManager aurora = characters[list].transform.parent.GetComponentInChildren<AuroraManager>();
-                foreach (var spawnPos in genNum)
+                for (int i = 0; i < quantityOrbs; i++)
                 {
                     int orbSelected = Random.Range(0, OrbSpawn.Count - 1);
                     while (genNum.Contains(orbSelected))
@@ -188,16 +196,6 @@ public class GameManager : MonoBehaviour
                 characters[list].GetComponentInParent<PlayerMovement>().SetCharacter(1);
             }
         }
-    }
-
-    public void onSettings()
-    {
-       
-    }
-
-    public void onCredits()
-    {
-
     }
 
     public void onQuit()

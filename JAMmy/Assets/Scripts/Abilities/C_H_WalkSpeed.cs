@@ -8,6 +8,11 @@ public class C_H_WalkSpeed : MonoBehaviour
     [SerializeField] private float duration;
     [SerializeField] private float multiplier;
 
+    public void ResetAction()
+    {
+        StopAllCoroutines();
+    }
+
     public void StartAction()
     {
         StartCoroutine("Duration");
