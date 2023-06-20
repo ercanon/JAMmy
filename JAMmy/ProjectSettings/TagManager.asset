@@ -9,6 +9,7 @@ TagManager:
   - Sync
   - Beacon
   - Ability
+  - AbilityEnemy
   layers:
   - Default
   - TransparentFX

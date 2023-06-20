@@ -16,6 +16,7 @@ public class PlayerMovement : MonoBehaviour
     private GameManager gameMan;
 
     public float movementSpeed;
+    public float orbPickUp;
     private Transform canvaOrb;
     private int orbCount;
     private Vector2 inputMovement;
@@ -96,6 +97,12 @@ public class PlayerMovement : MonoBehaviour
 
         switch (type)
         {
+            case 0:
+                orbCount++;
+                Destroy(canvaOrb.gameObject);
+                if (orbCount >= 3)
+                    gameMan.WinCond();
+                break;
             case 1:
                 ability1Check = true;
                 break;
@@ -204,7 +211,7 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    public void OnCollisionEnter2D(Collision2D collision)
+    public void OnTriggerEnter2D(Collider2D collision)
     {
         switch (collision.gameObject.tag)
         {
@@ -213,7 +220,6 @@ public class PlayerMovement : MonoBehaviour
                 {
                     canvaOrb = collision.transform;
 
-                    collision.collider.isTrigger = true;
                     canvaOrb.SetParent(transform);
                     canvaOrb.localScale *= 0.6f;
                     canvaOrb.localPosition = new Vector3(0, 0.7f, 0);
@@ -222,14 +228,29 @@ public class PlayerMovement : MonoBehaviour
 
             case "Beacon":
                 if (canvaOrb != null)
-                { 
-                    orbCount++;
-                    Destroy(canvaOrb.gameObject);
-                    if (orbCount >= 3)
-                        gameMan.WinCond();
+                    StartCoroutine(CoolDown(orbPickUp, 0));
+                break;
+
+            case "AbilityEnemy":
+                {
+                    if (canvaOrb != null)
+                    {
+                        canvaOrb = collision.transform;
+
+                        canvaOrb.SetParent(null);
+                        canvaOrb.localScale /= 0.6f;
+                        canvaOrb.localPosition = Vector3.zero;
+                    }
+                    else
+                        StopCoroutine(CoolDown(orbPickUp, 0));
                 }
                 break;
         }
+    }
+    public void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Beacon")
+            StopCoroutine(CoolDown(orbPickUp, 0));
     }
 
 

@@ -269,6 +269,7 @@ GameObject:
   - component: {fileID: 187527892}
   - component: {fileID: 187527894}
   - component: {fileID: 187527893}
+  - component: {fileID: 187527895}
   m_Layer: 0
   m_Name: Capsule
   m_TagString: Beacon
@@ -359,6 +360,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!70 &187527895
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 187527891}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.0000009536743, y: 0}
+  m_Size: {x: 1.5, y: 2.5}
+  m_Direction: 0
 --- !u!1 &202448294
 GameObject:
   m_ObjectHideFlags: 0
@@ -779,6 +796,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movementSpeed: 3
+  orbPickUp: 0
   Ability1: {fileID: 277554130}
   CoolDown1: 0
   Ability2: {fileID: 6607117097996693499, guid: 984d33db72e45a946b72ed45476438a6, type: 3}
@@ -828,6 +846,7 @@ GameObject:
   - component: {fileID: 385902478}
   - component: {fileID: 385902480}
   - component: {fileID: 385902479}
+  - component: {fileID: 385902481}
   m_Layer: 0
   m_Name: Capsule
   m_TagString: Beacon
@@ -918,6 +937,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!70 &385902481
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 385902477}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.0000009536743, y: 0}
+  m_Size: {x: 1.5, y: 2.5}
+  m_Direction: 0
 --- !u!1 &414296764
 GameObject:
   m_ObjectHideFlags: 0
@@ -1020,6 +1055,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movementSpeed: 3
+  orbPickUp: 0
   Ability1: {fileID: 474933788}
   CoolDown1: 0
   Ability2: {fileID: 1069647291993804752, guid: ecb9f8d644012224ea3d11c64c9feca5, type: 3}
@@ -1196,6 +1232,7 @@ GameObject:
   - component: {fileID: 615402823}
   - component: {fileID: 615402825}
   - component: {fileID: 615402824}
+  - component: {fileID: 615402826}
   m_Layer: 0
   m_Name: Capsule
   m_TagString: Beacon
@@ -1286,6 +1323,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!70 &615402826
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 615402822}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.0000009536743, y: 0}
+  m_Size: {x: 1.5, y: 2.5}
+  m_Direction: 0
 --- !u!1 &619394800
 GameObject:
   m_ObjectHideFlags: 0
@@ -3349,6 +3402,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movementSpeed: 3
+  orbPickUp: 0
   Ability1: {fileID: 1357587515}
   CoolDown1: 0
   Ability2: {fileID: 6835667261634698424, guid: 3881854ac4b2df340bf0b251be2f32cf, type: 3}
@@ -3943,6 +3997,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movementSpeed: 3
+  orbPickUp: 0
   Ability1: {fileID: 1672062211}
   CoolDown1: 10
   Ability2: {fileID: 7058378545077046719, guid: 5547d8ef824abfe4396c00e59b765a77, type: 3}
@@ -4237,6 +4292,7 @@ GameObject:
   - component: {fileID: 1774248346}
   - component: {fileID: 1774248348}
   - component: {fileID: 1774248347}
+  - component: {fileID: 1774248349}
   m_Layer: 0
   m_Name: Capsule
   m_TagString: Beacon
@@ -4327,6 +4383,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!70 &1774248349
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1774248345}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.0000009536743, y: 0}
+  m_Size: {x: 1.5, y: 2.5}
+  m_Direction: 0
 --- !u!1 &1813801952
 GameObject:
   m_ObjectHideFlags: 0

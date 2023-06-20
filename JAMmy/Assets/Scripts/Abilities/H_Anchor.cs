@@ -5,7 +5,6 @@ using UnityEngine;
 public class H_Anchor : MonoBehaviour
 {
     [SerializeField] private float duration;
-    [SerializeField] private float multiplier;
 
     private IEnumerator Duration(PlayerMovement player)
     {
@@ -18,7 +17,7 @@ public class H_Anchor : MonoBehaviour
         player.movementSpeed = prevSpeed;
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.tag == "Ability")
         {

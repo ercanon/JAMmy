@@ -4,11 +4,31 @@ using UnityEngine;
 
 public class K_KnockBack : MonoBehaviour
 {
-    [SerializeField] private float multiplier = 10f;
+    [SerializeField] private float multiplier;
+    [SerializeField] private float durationOn;
+    [SerializeField] private float durationOff;
+    private bool active;
 
-    private void OnTriggerStay2D(Collider2D collision)
+    private void Start()
     {
-        if (collision.gameObject.tag == "Player")
+        active = true;
+        StartCoroutine(Duration(durationOn));
+    }
+
+    private IEnumerator Duration(float dur)
+    {
+        yield return new WaitForSeconds(dur);
+
+        active = !active;
+        if (!active)
+            StartCoroutine(Duration(durationOff));
+        else
+            StartCoroutine(Duration(durationOn));
+    }
+
+    private void OnCollisionStay2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Player" && active)
         {
             Vector3 repelDirection = collision.transform.position - transform.position;
             repelDirection.Normalize();
