@@ -2578,7 +2578,7 @@ MonoBehaviour:
   movementSpeed: 3
   orbPickUp: 3
   Ability1: {fileID: 474933788}
-  CoolDown1: 0
+  CoolDown1: 3
   Ability2: {fileID: 1069647291993804752, guid: ecb9f8d644012224ea3d11c64c9feca5, type: 3}
   Partner: {fileID: 277554124}
   CoolDown2: 0
@@ -2616,7 +2616,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 474933786}
   duration: 0.2
-  multiplier: 10
+  multiplier: 4
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -10881,7 +10881,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1672062210}
-  duration: 5
+  duration: 3
   multiplier: 1.7
 --- !u!1 &1690113225
 GameObject:
