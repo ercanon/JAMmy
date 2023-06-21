@@ -270,7 +270,10 @@ public class PlayerMovement : MonoBehaviour
                         canvaOrb.localPosition = Vector3.zero;
                     }
                     else
+                    {
                         StopCoroutine(orbDeposit);
+                        orbDeposit = CoolDown(orbPickUp, 0);
+                    }
                 }
                 break;
         }
@@ -278,7 +281,10 @@ public class PlayerMovement : MonoBehaviour
     public void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Beacon")
+        {
             StopCoroutine(orbDeposit);
+            orbDeposit = CoolDown(orbPickUp, 0);
+        }
     }
 
 

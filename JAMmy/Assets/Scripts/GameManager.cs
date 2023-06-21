@@ -109,9 +109,9 @@ public class GameManager : MonoBehaviour
                 }
             }
 
-            //foreach (bool check in charAvailable)
-            //    if (check == true)
-            //        return;
+            foreach (bool check in charAvailable)
+                if (check == true)
+                    return;
             startCond.interactable = true; 
         }
     }
@@ -136,7 +136,7 @@ public class GameManager : MonoBehaviour
         foreach (GameObject player in characters)
         {
             if (player.activeInHierarchy)
-                player.GetComponentInParent<PlayerMovement>().SetCharacter(1);
+                player.GetComponentInParent<PlayerMovement>().SetCharacter(0);
 
             AuroraManager aurora = player.transform.parent.GetComponentInChildren<AuroraManager>();
             aurora.ClearList();
@@ -162,7 +162,8 @@ public class GameManager : MonoBehaviour
             characters[posLists].transform.parent.position = initPos[posLists];
         }
 
-        if (gState++ > GameState.EndScreen)
+        gState++;
+        if (gState >= GameState.EndScreen)
         {
             transform.GetChild(1).gameObject.SetActive(false);
             Transform aux = transform.GetChild(2);
