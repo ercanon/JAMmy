@@ -6,15 +6,22 @@ public class E_Teleport : MonoBehaviour
 {
     [SerializeField] private List<Vector2> corners;
     [SerializeField] private List<Transform> maps;
+    [SerializeField] private Animator anim;
+    [SerializeField] private SpriteRenderer sprite;
     private Vector2 centerMap;
 
     void ResetAction()
     {
-        
+        anim.enabled = false;
+        sprite.enabled = false;
     }
 
     public void StartAction()
     {
+        sprite.enabled = true;
+        anim.enabled = true;
+        anim.Play("idle");
+
         centerMap = Vector2.zero;
         Vector2 playerPos = (Vector2) transform.position;
         foreach (Transform mapPos in maps)

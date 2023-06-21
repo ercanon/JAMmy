@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: -6611417974045736972}
   - component: {fileID: 3693826968890648928}
   - component: {fileID: 8121415312982846989}
+  - component: {fileID: 1128715427433434406}
   m_Layer: 0
   m_Name: E_OrbSpeed
   m_TagString: Ability
@@ -67,7 +68,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 9dfc825aed78fcd4ba02077103263b40, type: 2}
+  - {fileID: 2100000, guid: 8b68a07b3d45f2741a5744f1ffd96a0d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -88,7 +89,7 @@ SpriteRenderer:
   m_SortingLayerID: -2052269713
   m_SortingLayer: 2
   m_SortingOrder: 0
-  m_Sprite: {fileID: -9095717837082945937, guid: 207ee8102dd4143d288186ef0be518ee, type: 3}
+  m_Sprite: {fileID: -627158795, guid: 3c85fc7199a2c2049974db6f30e41f6e, type: 3}
   m_Color: {r: 0.5801887, g: 0.90029454, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -115,3 +116,24 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: -0.25}
   m_Size: {x: 1, y: 0.5}
   m_Direction: 1
+--- !u!95 &1128715427433434406
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6835667261634698424}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 94fe01591e63eda4db7d7173de25bb8b, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0

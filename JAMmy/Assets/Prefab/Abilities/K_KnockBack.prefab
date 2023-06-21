@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: -6435499648667992538}
   - component: {fileID: 6667731299276641734}
   - component: {fileID: 2269399104052122283}
+  - component: {fileID: 4529233467382433407}
   m_Layer: 0
   m_Name: K_KnockBack
   m_TagString: AbilityEnemy
@@ -69,7 +70,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 9dfc825aed78fcd4ba02077103263b40, type: 2}
+  - {fileID: 2100000, guid: bb1d136c8cbc0264392c7c4d8f26072a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -90,7 +91,7 @@ SpriteRenderer:
   m_SortingLayerID: -2052269713
   m_SortingLayer: 2
   m_SortingOrder: 0
-  m_Sprite: {fileID: -9095717837082945937, guid: 207ee8102dd4143d288186ef0be518ee, type: 3}
+  m_Sprite: {fileID: 535953094, guid: 73de302f7ead4ea4db2634b1ad8ac5fc, type: 3}
   m_Color: {r: 0, g: 0.91796017, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -117,3 +118,24 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: -0.25}
   m_Size: {x: 1, y: 0.5}
   m_Direction: 1
+--- !u!95 &4529233467382433407
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3537222833159512094}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 3d4adc5d565b05d4d9bf74828f1df924, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0

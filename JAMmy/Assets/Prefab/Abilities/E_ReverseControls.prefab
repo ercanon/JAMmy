@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1345448728157734823}
   - component: {fileID: 4644187881476462820}
   - component: {fileID: 253737020078858121}
+  - component: {fileID: 6689427771510143190}
   m_Layer: 0
   m_Name: E_ReverseControls
   m_TagString: AbilityEnemy
@@ -46,6 +47,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22e92f639cac73540b2ae812b0bb9ef9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  duration: 0
 --- !u!212 &4644187881476462820
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -87,7 +89,7 @@ SpriteRenderer:
   m_SortingLayerID: -2052269713
   m_SortingLayer: 2
   m_SortingOrder: 0
-  m_Sprite: {fileID: -9095717837082945937, guid: 207ee8102dd4143d288186ef0be518ee, type: 3}
+  m_Sprite: {fileID: -1299485900, guid: 34a3eb639839f804096de7e68fb3efdb, type: 3}
   m_Color: {r: 1, g: 0.9728835, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -114,3 +116,24 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: -0.25}
   m_Size: {x: 1, y: 0.5}
   m_Direction: 1
+--- !u!95 &6689427771510143190
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3309388589206924604}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: b04e207ca45073640aa1fbbb054e1f59, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
