@@ -1245,6 +1245,7 @@ Transform:
   - {fileID: 267057248}
   - {fileID: 85463114}
   - {fileID: 1218510081}
+  - {fileID: 792884782}
   m_Father: {fileID: 1407976368}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2695,7 +2696,7 @@ Camera:
   far clip plane: 15
   field of view: 34
   orthographic: 1
-  orthographic size: 2
+  orthographic size: 2.5
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -4610,7 +4611,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 792884781}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 8.417142, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -4621,7 +4622,7 @@ Transform:
   - {fileID: 1692752616}
   - {fileID: 828190185}
   - {fileID: 873437225}
-  m_Father: {fileID: 1310342617}
+  m_Father: {fileID: 212490505}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &813201139
@@ -4648,13 +4649,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 813201139}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.13, y: -2.58, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -3.0879998, y: -5.2869997, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1690113226}
-  m_RootOrder: 4
+  m_Father: {fileID: 1424852390}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &813201141
 BoxCollider2D:
@@ -5940,7 +5941,6 @@ Transform:
   - {fileID: 1840316050}
   - {fileID: 392307051}
   - {fileID: 1542926824}
-  - {fileID: 1873230149}
   - {fileID: 1655243069}
   m_Father: {fileID: 1924870315}
   m_RootOrder: 1
@@ -7178,7 +7178,7 @@ Camera:
   far clip plane: 15
   field of view: 26.991467
   orthographic: 1
-  orthographic size: 2
+  orthographic size: 2.5
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -8266,7 +8266,7 @@ Transform:
   - {fileID: 1545283182}
   - {fileID: 1690113226}
   - {fileID: 1858342971}
-  - {fileID: 792884782}
+  - {fileID: 1873230149}
   m_Father: {fileID: 1000242961}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -9563,7 +9563,8 @@ Transform:
   m_LocalPosition: {x: 0.958, y: 2.707, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 813201140}
   m_Father: {fileID: 1690113226}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -10617,7 +10618,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1655243068}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -8.417142, y: 8.417142, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -10629,7 +10630,7 @@ Transform:
   - {fileID: 2086918181}
   - {fileID: 1311809254}
   m_Father: {fileID: 1021681306}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1662277816
 GameObject:
@@ -10914,7 +10915,6 @@ Transform:
   - {fileID: 668049475}
   - {fileID: 1767520404}
   - {fileID: 1430043547}
-  - {fileID: 813201140}
   m_Father: {fileID: 1310342617}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -11409,7 +11409,7 @@ Camera:
   far clip plane: 15
   field of view: 34
   orthographic: 1
-  orthographic size: 2
+  orthographic size: 2.5
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -12378,7 +12378,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1873230148}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -8.417142, y: 8.417142, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -12389,7 +12389,7 @@ Transform:
   - {fileID: 1773741304}
   - {fileID: 39067931}
   - {fileID: 335318707}
-  m_Father: {fileID: 1021681306}
+  m_Father: {fileID: 1310342617}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1924870314
@@ -13903,7 +13903,7 @@ Camera:
   far clip plane: 15
   field of view: 34
   orthographic: 1
-  orthographic size: 2
+  orthographic size: 2.5
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
