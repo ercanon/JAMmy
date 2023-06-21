@@ -16,11 +16,12 @@ public class PlayerMovement : MonoBehaviour
     private GameManager gameMan;
 
     public float movementSpeed;
-    public float orbPickUp;
+    [SerializeField] private float orbPickUp;
     private Transform canvaOrb;
     private Vector2 inputMovement;
     private CharacterState cState;
     private CharacterDirection cDir;
+    private IEnumerator orbDeposit;
     private int charID;
 
     [Header("Ability1")]
@@ -86,10 +87,24 @@ public class PlayerMovement : MonoBehaviour
         Ability1CoolDown = CoolDown(CoolDown1, 1);
         Ability2CoolDown = CoolDown(CoolDown2, 2);
         Ability3CoolDown = CoolDown(CoolDown3, 3);
+        orbDeposit = CoolDown(orbPickUp, 0);
         Ability1.SendMessage("ResetAction");
 
         cState = (CharacterState)state;
         inputs.SwitchCurrentActionMap("Player Controller");
+    }
+
+    public void SetOrbDeposit(float multiplier, int sign)
+    {
+        switch (sign)
+        {
+            case 0:
+                orbDeposit = CoolDown(orbPickUp *= multiplier, 0);
+                break;
+            case 1:
+                orbDeposit = CoolDown(orbPickUp /= multiplier, 0);
+                break;
+        }
     }
 
     private IEnumerator CoolDown(float duration, int type)
@@ -100,6 +115,7 @@ public class PlayerMovement : MonoBehaviour
         {
             case 0:
                 Destroy(canvaOrb.gameObject);
+                orbDeposit = CoolDown(orbPickUp, 0);
 
                 yield return null;
 
@@ -240,7 +256,7 @@ public class PlayerMovement : MonoBehaviour
 
             case "Beacon":
                 if (canvaOrb != null)
-                    StartCoroutine(CoolDown(orbPickUp, 0));
+                    StartCoroutine(orbDeposit);
                 break;
 
             case "AbilityEnemy":
@@ -254,7 +270,7 @@ public class PlayerMovement : MonoBehaviour
                         canvaOrb.localPosition = Vector3.zero;
                     }
                     else
-                        StopCoroutine(CoolDown(orbPickUp, 0));
+                        StopCoroutine(orbDeposit);
                 }
                 break;
         }
@@ -262,7 +278,7 @@ public class PlayerMovement : MonoBehaviour
     public void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Beacon")
-            StopCoroutine(CoolDown(orbPickUp, 0));
+            StopCoroutine(orbDeposit);
     }
 
 

@@ -26,6 +26,14 @@ public class K_KnockBack : MonoBehaviour
             StartCoroutine(Duration(durationOn));
     }
 
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Ability" || collision.gameObject.tag == "AbilityEnemy")
+        {
+            Destroy(collision.gameObject);
+        }
+    }
+
     private void OnTriggerStay2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Player" && active)

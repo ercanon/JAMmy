@@ -8,6 +8,11 @@ public class C_SpeedBoost : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        if (collision.gameObject.tag == "Ability" || collision.gameObject.tag == "AbilityEnemy")
+        {
+            Destroy(collision.gameObject);
+        }
+
         if (collision.gameObject.tag == "Player")
         {
             collision.gameObject.GetComponent<PlayerMovement>().movementSpeed *= multiplier;

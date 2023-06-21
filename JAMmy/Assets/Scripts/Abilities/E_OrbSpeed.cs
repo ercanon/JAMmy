@@ -8,9 +8,14 @@ public class E_OrbSpeed : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        if (collision.gameObject.tag == "Ability" || collision.gameObject.tag == "AbilityEnemy")
+        {
+            Destroy(collision.gameObject);
+        }
+
         if (collision.gameObject.tag == "Player")
         {
-            collision.gameObject.GetComponent<PlayerMovement>().orbPickUp *= multiplier;
+            collision.gameObject.GetComponent<PlayerMovement>().SetOrbDeposit(multiplier, 0);
         }
     }
 
@@ -18,7 +23,7 @@ public class E_OrbSpeed : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
-            collision.gameObject.GetComponent<PlayerMovement>().orbPickUp /= multiplier;
+            collision.gameObject.GetComponent<PlayerMovement>().SetOrbDeposit(multiplier, 1);
         }
     }
 }

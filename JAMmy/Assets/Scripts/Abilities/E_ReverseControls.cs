@@ -4,19 +4,29 @@ using UnityEngine;
 
 public class E_ReverseControls : MonoBehaviour
 {
+    [SerializeField] private float duration;
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        if (collision.gameObject.tag == "Ability" || collision.gameObject.tag == "AbilityEnemy")
+        {
+            Destroy(collision.gameObject);
+        }
+
         if (collision.gameObject.tag == "Player")
         {
-            collision.gameObject.GetComponent<PlayerMovement>().movementSpeed *= -1;
+            StartCoroutine(Duration(collision.gameObject.GetComponent<PlayerMovement>()));
         }
     }
 
-    private void OnTriggerExit2D(Collider2D collision)
+    private IEnumerator Duration(PlayerMovement player)
     {
-        if (collision.gameObject.tag == "Player")
-        {
-            collision.gameObject.GetComponent<PlayerMovement>().movementSpeed *= -1;
-        }
+        float prevSpeed = player.movementSpeed;
+
+        player.movementSpeed *= -1;
+
+        yield return new WaitForSeconds(duration);
+
+        player.movementSpeed *= -1;
     }
 }
